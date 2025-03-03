@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>林源-lyuanx</title>
+        <link>https://lyuanx.github.io/</link>
+        <description>Recent content on 林源-lyuanx</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>林源-lyuanx</copyright>
+        <lastBuildDate>Thu, 27 Feb 2025 19:35:25 +0800</lastBuildDate><atom:link href="https://lyuanx.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>学习项目展示</title>
+        <link>https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/</link>
+        <pubDate>Thu, 27 Feb 2025 19:35:25 +0800</pubDate>
+        
+        <guid>https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/</guid>
+        <description>&lt;h1 id=&#34;学习项目&#34;&gt;学习项目
+&lt;/h1&gt;&lt;h2 id=&#34;学习---学成在线静态页&#34;&gt;学习 - 学成在线(静态页)
+&lt;/h2&gt;&lt;p&gt;github: &lt;a class=&#34;link&#34; href=&#34;https://github.com/lyuanx/demo-front/tree/main/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/lyuanx/demo-front/tree/main/%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/XueChengZaiXian/XueChengZaiXian.png&#34;
+	width=&#34;1905&#34;
+	height=&#34;1653&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/XueChengZaiXian/XueChengZaiXian_hu_22dd8b83068af962.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/XueChengZaiXian/XueChengZaiXian_hu_b393be0510aa499b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;学成在线&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;276px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;学习---品优购静态页&#34;&gt;学习 - 品优购(静态页)
+&lt;/h2&gt;&lt;p&gt;github: &lt;a class=&#34;link&#34; href=&#34;https://github.com/lyuanx/demo-front/tree/main/%E5%93%81%E4%BC%98%E8%B4%AD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/lyuanx/demo-front/tree/main/%E5%93%81%E4%BC%98%E8%B4%AD&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;练习项目分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首页&lt;/li&gt;
+&lt;li&gt;手机列表页&lt;/li&gt;
+&lt;li&gt;注册页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;整体展示&#34;&gt;整体展示
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5.png&#34;
+	width=&#34;1905&#34;
+	height=&#34;2075&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5_hu_63ea78c618963a75.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5_hu_faddf23d4656dec9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;首页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;91&#34;
+		data-flex-basis=&#34;220px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;跳转-手机列表页&#34;&gt;跳转 手机列表页
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;190&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5_hu_17ce3528b2517aba.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5_hu_17c8af2cf32ea98e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;跳转手机列表页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;568&#34;
+		data-flex-basis=&#34;1364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;跳转-注册页&#34;&gt;跳转 注册页
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%B3%A8%E5%86%8C%E9%A1%B5.png&#34;
+	width=&#34;504&#34;
+	height=&#34;248&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%B3%A8%E5%86%8C%E9%A1%B5_hu_332a2ded7c4b543a.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E9%A6%96%E9%A1%B5-%E8%B7%B3%E8%BD%AC%E6%B3%A8%E5%86%8C%E9%A1%B5_hu_c4fcbf9a82e539be.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;跳转注册页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;203&#34;
+		data-flex-basis=&#34;487px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;手机列表页&#34;&gt;手机列表页
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5.png&#34;
+	width=&#34;1905&#34;
+	height=&#34;2096&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5_hu_b9f998bd77442950.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%89%8B%E6%9C%BA%E5%88%97%E8%A1%A8%E9%A1%B5_hu_cd2d877e9cf7856b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;手机列表页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;218px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;注册页&#34;&gt;注册页
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%B3%A8%E5%86%8C%E9%A1%B5.png&#34;
+	width=&#34;1905&#34;
+	height=&#34;725&#34;
+	srcset=&#34;https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%B3%A8%E5%86%8C%E9%A1%B5_hu_71e75f4b10ac6ca0.png 480w, https://lyuanx.github.io/p/%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E5%B1%95%E7%A4%BA/images/PinYouGou/%E5%93%81%E4%BC%98%E8%B4%AD-%E6%B3%A8%E5%86%8C%E9%A1%B5_hu_ce1c46b243bdc211.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;注册页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;630px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>归档</title>
+        <link>https://lyuanx.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://lyuanx.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://lyuanx.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lyuanx.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://lyuanx.github.io/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lyuanx.github.io/%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://lyuanx.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lyuanx.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
