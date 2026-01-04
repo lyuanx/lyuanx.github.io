@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Astro Blog" href="https://example.com/rss.xml"><meta name="generator" content="Astro v5.16.6"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://example.com/blog/android---%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"><!-- Primary Meta Tags --><title>Android 目录结构</title><meta name="title" content="Android 目录结构"><meta name="description" content="Android 目录结构...."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/blog/android---%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"><meta property="og:title" content="Android 目录结构"><meta property="og:description" content="Android 目录结构...."><meta property="og:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://example.com/blog/android---%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"><meta property="twitter:title" content="Android 目录结构"><meta property="twitter:description" content="Android 目录结构...."><meta property="twitter:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media(max-width:720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media(max-width:720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Astro Blog</a></h2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Home </a>  <a href="/blog" class="active" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <div class="social-links" data-astro-cid-3ef6ksr2> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img src="/_astro/blog-placeholder-4.gLBdjEDe_IpMdA.webp" alt data-astro-cid-bvzihdzo="true" loading="lazy" decoding="async" fetchpriority="auto" width="1020" height="510"> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2026-01-02T00:00:00.000Z"> Jan 2, 2026 </time>  </div> <h1 data-astro-cid-bvzihdzo>Android 目录结构</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>Android 开发过程中，高效、清晰的项目结构是成功的关键。理解并合理组织项目结构，有助于提高代码的可维护性和团队协作的效率。</p>
+<h3 id="目录概览">目录概览</h3>
+<p>一个典型的 Android 项目目录结构如下：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">MyApplication/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── app/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   ├── build/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   ├── libs/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   ├── src/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   ├── androidTest/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   │   └── java/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   ├── main/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   │   ├── java/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   │   ├── kotlin/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   │   ├── res/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   │   ├── AndroidManifest</span><span style="color:#B392F0">.xml</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │   └── test/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   │       └── java/</span></span>
+<span class="line"><span style="color:#E1E4E8"> │   ├── build</span><span style="color:#B392F0">.gradle</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── build/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── gradle/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── </span><span style="color:#FDAEB7;font-style:italic">.gradle/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── build</span><span style="color:#B392F0">.gradle</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── gradle</span><span style="color:#B392F0">.properties</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── gradlew</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── gradlew</span><span style="color:#B392F0">.bat</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── settings</span><span style="color:#B392F0">.gradle</span></span>
+<span class="line"><span style="color:#E1E4E8"> └── local</span><span style="color:#B392F0">.properties</span></span></code></pre>
+<h3 id="1-顶级目录">1. 顶级目录</h3>
+<p>顶级目录包含整个项目的全局配置和设置。</p>
+<h4 id="11-buildgradle">1.1 <code>build.gradle</code></h4>
+<p>这是顶级 Gradle 构建脚本，用于配置全局项目设置和依赖项。一个典型的顶级 <code>build.gradle</code> 文件可能如下所示：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="groovy"><code><span class="line"><span style="color:#E1E4E8">buildscript {</span></span>
+<span class="line"><span style="color:#E1E4E8">    ext</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">kotlin_version </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> '1.5.21'</span></span>
+<span class="line"><span style="color:#E1E4E8">    repositories {</span></span>
+<span class="line"><span style="color:#E1E4E8">        google()</span></span>
+<span class="line"><span style="color:#E1E4E8">        mavenCentral()</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    dependencies {</span></span>
+<span class="line"><span style="color:#E1E4E8">        classpath </span><span style="color:#9ECBFF">'com.android.tools.build:gradle:7.0.0'</span></span>
+<span class="line"><span style="color:#E1E4E8">        classpath </span><span style="color:#9ECBFF">"org.jetbrains.kotlin:kotlin-gradle-plugin:</span><span style="color:#E1E4E8">$kotlin_version</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">allprojects {</span></span>
+<span class="line"><span style="color:#E1E4E8">    repositories {</span></span>
+<span class="line"><span style="color:#E1E4E8">        google()</span></span>
+<span class="line"><span style="color:#E1E4E8">        mavenCentral()</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">task clean(</span><span style="color:#79B8FF">type</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">Delete</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">    delete rootProject</span><span style="color:#F97583">.</span><span style="color:#E1E4E8">buildDir</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h4 id="12-settingsgradle">1.2 <code>settings.gradle</code></h4>
+<p>用于包括多模块项目的设置文件。通常包含项目名称和模块信息：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="groovy"><code><span class="line"><span style="color:#E1E4E8">include </span><span style="color:#9ECBFF">':app'</span></span></code></pre>
+<h4 id="13-gradleproperties">1.3 <code>gradle.properties</code></h4>
+<p>用于设置 Gradle 构建系统的一些属性，例如内存设置、缓存选项等：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="properties"><code><span class="line"><span style="color:#F97583">org.gradle.jvmargs</span><span style="color:#E1E4E8">=-Xmx1536m</span></span></code></pre>
+<h4 id="14-gradlew-和-gradlewbat">1.4 <code>gradlew</code> 和 <code>gradlew.bat</code></h4>
+<p>它们是 Gradle Wrapper 脚本，允许在没有预先安装 Gradle 的环境中运行 Gradle 任务。<code>gradlew</code> 是适用于 Unix/Linux 系统的脚本，而 <code>gradlew.bat</code> 适用于 Windows 系统。</p>
+<h4 id="15-localproperties">1.5 <code>local.properties</code></h4>
+<p>这个文件通常包含本地机器的特定配置，例如 Android SDK 的路径：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="properties"><code><span class="line"><span style="color:#F97583">sdk.dir</span><span style="color:#E1E4E8">=/Users/your_user/Library/Android/sdk</span></span></code></pre>
+<h3 id="2-app-模块">2. <code>app</code> 模块</h3>
+<p><code>app</code> 是应用程序的主模块，也是最常见的模块。它包含应用程序的源代码、资源文件、构建脚本等。</p>
+<h4 id="21-buildgradle">2.1 <code>build.gradle</code></h4>
+<p>该文件是模块级的构建脚本，定义了模块的构建配置和依赖关系：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="groovy"><code><span class="line"><span style="color:#E1E4E8">plugins {</span></span>
+<span class="line"><span style="color:#E1E4E8">    id </span><span style="color:#9ECBFF">'com.android.application'</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">android {</span></span>
+<span class="line"><span style="color:#E1E4E8">    compileSdkVersion </span><span style="color:#79B8FF">30</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    defaultConfig {</span></span>
+<span class="line"><span style="color:#E1E4E8">        applicationId </span><span style="color:#9ECBFF">"com.example.myapp"</span></span>
+<span class="line"><span style="color:#E1E4E8">        minSdkVersion </span><span style="color:#79B8FF">16</span></span>
+<span class="line"><span style="color:#E1E4E8">        targetSdkVersion </span><span style="color:#79B8FF">30</span></span>
+<span class="line"><span style="color:#E1E4E8">        versionCode </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">        versionName </span><span style="color:#9ECBFF">"1.0"</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    buildTypes {</span></span>
+<span class="line"><span style="color:#E1E4E8">        release {</span></span>
+<span class="line"><span style="color:#E1E4E8">            minifyEnabled </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#E1E4E8">            proguardFiles getDefaultProguardFile(</span><span style="color:#9ECBFF">'proguard-android-optimize.txt'</span><span style="color:#E1E4E8">), </span><span style="color:#9ECBFF">'proguard-rules.pro'</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">dependencies {</span></span>
+<span class="line"><span style="color:#E1E4E8">    implementation </span><span style="color:#9ECBFF">'com.android.support:appcompat-v7:28.0.0'</span></span>
+<span class="line"><span style="color:#E1E4E8">    implementation </span><span style="color:#9ECBFF">"org.jetbrains.kotlin:kotlin-stdlib:</span><span style="color:#E1E4E8">$kotlin_version</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#E1E4E8">    testImplementation </span><span style="color:#9ECBFF">'junit:junit:4.12'</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="3-src-目录">3. <code>src</code> 目录</h3>
+<p><code>src</code> 目录包含应用程序的所有源代码、资源文件和配置文件。</p>
+<h4 id="31-main-目录">3.1 <code>main</code> 目录</h4>
+<p>这是应用程序的主目录，也是最重要的目录，包含以下子目录：</p>
+<h5 id="311-java-目录">3.1.1 <code>java</code> 目录</h5>
+<p>包含所有的 Java 源代码文件。通常，它的目录结构与包名一致：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">src/main/java/com/example/myapp/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── MainActivity</span><span style="color:#B392F0">.java</span></span>
+<span class="line"><span style="color:#E1E4E8"> └── AnotherActivity</span><span style="color:#B392F0">.java</span></span></code></pre>
+<h5 id="312-kotlin-目录">3.1.2 <code>kotlin</code> 目录</h5>
+<p>如果项目使用 Kotlin 编写，这里将包含所有的 Kotlin 源代码文件：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#E1E4E8">src/main/kotlin/com/example/myapp/</span></span>
+<span class="line"><span style="color:#E1E4E8"> ├── MainActivity</span><span style="color:#B392F0">.kt</span></span>
+<span class="line"><span style="color:#E1E4E8"> └── AnotherActivity</span><span style="color:#B392F0">.kt</span></span></code></pre>
+<h5 id="313-res-目录">3.1.3 <code>res</code> 目录</h5>
+<p>包含所有应用程序的资源文件，如布局文件、图片、字符串资源等。<code>res</code> 目录中通常包含以下子目录：</p>
+<ul>
+<li><code>drawable/</code>：包含位图文件，如 PNG、JPEG 等。</li>
+<li><code>layout/</code>：存放应用程序的布局文件（XML）。</li>
+<li><code>mipmap/</code>：存放启动图标（.ico），不同尺寸分别存在 <code>mipmap-hdpi</code>, <code>mipmap-mdpi</code>, <code>mipmap-xhdpi</code> 等目录。</li>
+<li><code>values/</code>：存放资源值文件，如 <code>strings.xml</code>, <code>colors.xml</code>, <code>styles.xml</code> 等。</li>
+</ul>
+<h4 id="32-androidmanifestxml">3.2 <code>AndroidManifest.xml</code></h4>
+<p>这是一个非常重要的配置文件，定义了应用程序的基本信息、组件、权限等：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">manifest</span><span style="color:#B392F0"> xmlns:android</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    package</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"com.example.myapp"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">application</span></span>
+<span class="line"><span style="color:#B392F0">        android:allowBackup</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android:icon</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"@mipmap/ic_launcher"</span></span>
+<span class="line"><span style="color:#B392F0">        android:label</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"@string/app_name"</span></span>
+<span class="line"><span style="color:#B392F0">        android:roundIcon</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"@mipmap/ic_launcher_round"</span></span>
+<span class="line"><span style="color:#B392F0">        android:supportsRtl</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android:theme</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"@style/AppTheme"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        &#x3C;</span><span style="color:#85E89D">activity</span><span style="color:#B392F0"> android:name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">".MainActivity"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">            &#x3C;</span><span style="color:#85E89D">intent-filter</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">                &#x3C;</span><span style="color:#85E89D">action</span><span style="color:#B392F0"> android:name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"android.intent.action.MAIN"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">                &#x3C;</span><span style="color:#85E89D">category</span><span style="color:#B392F0"> android:name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"android.intent.category.LAUNCHER"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"><span style="color:#E1E4E8">            &#x3C;/</span><span style="color:#85E89D">intent-filter</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">        &#x3C;/</span><span style="color:#85E89D">activity</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        &#x3C;!-- 其他组件，如Service、BroadcastReceiver等 --></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;/</span><span style="color:#85E89D">application</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">manifest</span><span style="color:#E1E4E8">></span></span></code></pre>
+<h3 id="4-测试目录">4. 测试目录</h3>
+<p>包括 <code>androidTest</code> 和 <code>test</code> 目录，分别用于编写仪器化测试和单元测试代码。</p>
+<h4 id="41-androidtest-目录">4.1 <code>androidTest</code> 目录</h4>
+<p>包含仪器化测试的源代码，通过 <code>AndroidJUnitRunner</code> 运行：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">src/androidTest/java/com/example/myapp/</span></span>
+<span class="line"><span style="color:#B392F0"> └──</span><span style="color:#9ECBFF"> ExampleInstrumentedTest.java</span></span></code></pre>
+<h4 id="42-test-目录">4.2 <code>test</code> 目录</h4>
+<p>包含单元测试的源代码，使用 JUnit 或其他测试框架进行测试：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">src/test/java/com/example/myapp/</span></span>
+<span class="line"><span style="color:#B392F0"> └──</span><span style="color:#9ECBFF"> ExampleUnitTest.java</span></span></code></pre>
+<h3 id="5-build-目录">5. <code>build</code> 目录</h3>
+<p>此目录用于存储 Gradle 构建生成的文件，如编译后的代码、打包的 APK 等。通常不需要手动修改或查看。</p>
+<h3 id="6-libs-目录">6. <code>libs</code> 目录</h3>
+<p>存放项目依赖的外部库（.jar 或 .aar 文件）。可以通过在 <code>build.gradle</code> 文件中引用该目录的库：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="groovy"><code><span class="line"><span style="color:#E1E4E8">dependencies {</span></span>
+<span class="line"><span style="color:#E1E4E8">    implementation files(</span><span style="color:#9ECBFF">'libs/some-library.jar'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="总结">总结</h2>
+<p>在实际项目中，根据具体需求可能会有所调整，但总体结构大致相同。掌握这些知识，有助于我们更好地组织和管理 Android 项目，提高开发效率和代码质量。</p>
+<p>转载自：<a href="https://www.cnblogs.com/chglog/p/18347697">https://www.cnblogs.com/chglog/p/18347697</a></p>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+&copy; 2026 Your name here. All rights reserved.
+<div class="social-links" data-astro-cid-sz7xmlte> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/mastodon" data-astro-cid-sz7xmlte><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter" data-astro-cid-sz7xmlte><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github" data-astro-cid-sz7xmlte><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-sz7xmlte></path></svg> </a> </div> </footer>  </body></html>

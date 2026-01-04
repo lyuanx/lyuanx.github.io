@@ -1,0 +1,1419 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Astro Blog" href="https://example.com/rss.xml"><meta name="generator" content="Astro v5.16.6"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://example.com/blog/android---%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"><!-- Primary Meta Tags --><title>Android 开发规范</title><meta name="title" content="Android 开发规范"><meta name="description" content="Android 开发规范...."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/blog/android---%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"><meta property="og:title" content="Android 开发规范"><meta property="og:description" content="Android 开发规范...."><meta property="og:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://example.com/blog/android---%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"><meta property="twitter:title" content="Android 开发规范"><meta property="twitter:description" content="Android 开发规范...."><meta property="twitter:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media(max-width:720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media(max-width:720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Astro Blog</a></h2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Home </a>  <a href="/blog" class="active" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <div class="social-links" data-astro-cid-3ef6ksr2> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img src="/_astro/blog-placeholder-4.gLBdjEDe_IpMdA.webp" alt data-astro-cid-bvzihdzo="true" loading="lazy" decoding="async" fetchpriority="auto" width="1020" height="510"> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2026-01-02T00:00:00.000Z"> Jan 2, 2026 </time>  </div> <h1 data-astro-cid-bvzihdzo>Android 开发规范</h1> <hr data-astro-cid-bvzihdzo> </div>  <h5 id="1-前言">1 前言</h5>
+<p>为了有利于项目维护、增强代 码可读性、提升 Code Review 效率以及规范团队安卓开发，故提出以下安卓开发规范，该规范结合本人多年的开发经验并吸取多家之精华，可谓是本人的呕心沥血之作，称其为当前最完善的安卓开发规范一点也不为过，如有更好建议，欢迎到 GitHub 提 issue，原文地址：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2FBlankj%2FAndroidStandardDevelop&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Android 开发规范(完结版)</strong></a>。相关 Demo，可以查看我的 Android 开发工具类集合项目：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2FBlankj%2FAndroidUtilCode&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Android 开发人员不得不收集的代码</strong></a>。后续可能会根据该规范出一个 CheckStyle 插件来检查是否规范，当然也支持在 CI 上运行。</p>
+<h5 id="2-as-规范">2 AS 规范</h5>
+<p>工欲善其事，必先利其器。</p>
+<ol>
+<li>尽量使用最新的稳定版的 IDE 进行开发；</li>
+<li>编码格式统一为 <strong>UTF-8</strong>；</li>
+<li>编辑完 .java、.xml 等文件后一定要 <strong>格式化，格式化，格式化</strong>(如果团队有公共的样式包，那就遵循它，否则统一使用 AS 默认模板即可)；</li>
+<li>删除多余的 import，减少警告出现，可利用 AS 的 Optimize Imports(Settings -> Keymap -> Optimize Imports)快捷键；</li>
+<li>Android <a href="https://cloud.tencent.com/product/coding?from_column=20065&#x26;from=20065">开发者工具</a>可以参考这里：<strong>Android 开发者工具</strong>；</li>
+</ol>
+<h5 id="3-命名规范">3 命名规范</h5>
+<p>代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解，避免歧义。</p>
+<blockquote>
+<p>注意：即使纯拼音命名方式也要避免采用。但 <code>alibaba</code>、<code>taobao</code>、<code>youku</code>、<code>hangzhou</code> 等国际通用的名称，可视同英文。</p>
+</blockquote>
+<h6 id="31-包名">3.1 包名</h6>
+<p>包名全部小写，连续的单词只是简单地连接起来，不使用下划线，采用反域名命名规则，全部使用小写字母。一级包名是顶级域名，通常为 <code>com</code>、<code>edu</code>、<code>gov</code>、<code>net</code>、<code>org</code> 等，二级包名为公司名，三级包名根据应用进行命名，后面就是对包名的划分了，关于包名的划分，推荐采用 PBF(按功能分包 Package By Feature)，一开始我们采用的也是 PBL(按层分包 Package By Layer)，很坑爹。PBF 可能不是很好区分在哪个功能中，不过也比 PBL 要好找很多，且 PBF 与 PBL 相比较有如下优势：</p>
+<ul>
+<li>package 内高内聚，package 间低耦合</li>
+</ul>
+<p>哪块要添新功能，只改某一个 package 下的东西。</p>
+<p>PBL 降低了代码耦合，但带来了 package 耦合，要添新功能，需要改 model、dbHelper、view、service 等等，需要改动好几个 package 下的代码，改动的地方越多，越容易产生新问题，不是吗？</p>
+<p>PBF 的话 featureA 相关的所有东西都在 featureA 包，feature 内高内聚、高度模块化，不同 feature 之间低耦合，相关的东西都放在一起，还好找。</p>
+<ul>
+<li>package 有私有作用域(package-private scope)</li>
+</ul>
+<p>你负责开发这块功能，这个目录下所有东西都是你的。</p>
+<p>PBL 的方式是把所有工具方法都放在 util 包下，小张开发新功能时候发现需要一个 xxUtil，但它又不是通用的，那应该放在哪里？没办法，按照分层原则，我们还得放在 util 包下，好像不太合适，但放在其它包更不合适，功能越来越多，util 类也越定义越多。后来小李负责开发一块功能时发现需要一个 xxUtil，同样不通用，去 util 包一看，怎么已经有了，而且还没法复用，只好放弃 xx 这个名字，改为 xxxUtil……，因为 PBL 的 package 没有私有作用域，每一个包都是 public(跨包方法调用是很平常的事情，每一个包对其它包来说都是可访问的)；如果是 PBF，小张的 xxUtil 自然放在 featureA 下，小李的 xxUtil 在 featureB 下，如果觉得 util 好像是通用的，就去 util 包看看要不要把工具方法添进 xxUtil, class 命名冲突没有了。</p>
+<p>PBF 的 package 有私有作用域，featureA 不应该访问 featureB 下的任何东西(如果非访问不可，那就说明接口定义有问题)。</p>
+<ul>
+<li>很容易删除功能</li>
+</ul>
+<p>统计发现新功能没人用，这个版本那块功能得去掉。</p>
+<p>如果是 PBL，得从功能入口到整个业务流程把受到牵连的所有能删的代码和 class 都揪出来删掉，一不小心就完蛋。</p>
+<p>如果是 PBF，好说，先删掉对应包，再删掉功能入口(删掉包后入口肯定报错了)，完事。</p>
+<ul>
+<li>高度抽象</li>
+</ul>
+<p>解决问题的一般方法是从抽象到具体，PBF 包名是对功能模块的抽象，包内的 class 是实现细节，符合从抽象到具体，而 PBL 弄反了。</p>
+<p>PBF 从确定 AppName 开始，根据功能模块划分 package，再考虑每块的具体实现细节，而 PBL 从一开始就要考虑要不要 dao 层，要不要 com 层等等。</p>
+<ul>
+<li>只通过 class 来分离逻辑代码</li>
+</ul>
+<p>PBL 既分离 class 又分离 package，而 PBF 只通过 class 来分离逻辑代码。</p>
+<p>没有必要通过 package 分离，因为 PBL 中也可能出现尴尬的情况：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">├── service</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── MainService.java</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>按照 PBL, service 包下的所有东西都是 Service，应该不需要 Service 后缀，但实际上通常为了方便，直接 import service 包，Service 后缀是为了避免引入的 class 和当前包下的 class 命名冲突，当然，不用后缀也可以，得写清楚包路径，比如 <code>new com.domain.service.MainService()</code>，麻烦；而 PBF 就很方便，无需 import，直接 <code>new MainService()</code> 即可。</p>
+<ul>
+<li>package 的大小有意义了</li>
+</ul>
+<p>PBL 中包的大小无限增长是合理的，因为功能越添越多，而 PBF 中包太大(包里 class 太多)表示这块需要重构(划分子包)。</p>
+<p>如要知道更多好处，可以查看这篇博文：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fmedium.com%2F@cesarmcferreira%2Fpackage-by-features-not-layers-2d076df1964d%23.mp782izhh&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Package by features, not layers</strong></a>，当然，我们大谷歌也有相应的 Sample：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fgooglesamples%2Fandroid-architecture%2Ftree%2Ftodo-mvp%2F&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>todo-mvp</strong></a>，其结构如下所示，很值得学习。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">com</span></span>
+<span class="line"><span style="color:#E1E4E8">└── example</span></span>
+<span class="line"><span style="color:#E1E4E8">    └── android</span></span>
+<span class="line"><span style="color:#E1E4E8">        └── architecture</span></span>
+<span class="line"><span style="color:#E1E4E8">            └── blueprints</span></span>
+<span class="line"><span style="color:#E1E4E8">                └── todoapp</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── BasePresenter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── BaseView.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── addedittask</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── AddEditTaskActivity.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── AddEditTaskContract.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── AddEditTaskFragment.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   └── AddEditTaskPresenter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── data</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── Task.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   └── source</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       ├── TasksDataSource.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       ├── TasksRepository.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       ├── local</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       │   ├── TasksDbHelper.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       │   ├── TasksLocalDataSource.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       │   └── TasksPersistenceContract.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │       └── remote</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │           └── TasksRemoteDataSource.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── statistics</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── StatisticsActivity.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── StatisticsContract.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── StatisticsFragment.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   └── StatisticsPresenter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── taskdetail</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TaskDetailActivity.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TaskDetailContract.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TaskDetailFragment.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   └── TaskDetailPresenter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    ├── tasks</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── ScrollChildSwipeRefreshLayout.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TasksActivity.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TasksContract.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TasksFilterType.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   ├── TasksFragment.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    │   └── TasksPresenter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                    └── util</span></span>
+<span class="line"><span style="color:#E1E4E8">                        ├── ActivityUtils.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                        ├── EspressoIdlingResource.java</span></span>
+<span class="line"><span style="color:#E1E4E8">                        └── SimpleCountingIdlingResource.java</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>参考以上的代码结构，按功能分包具体可以这样做：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">com</span></span>
+<span class="line"><span style="color:#E1E4E8">└── domain</span></span>
+<span class="line"><span style="color:#E1E4E8">    └── app</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── App.java 定义 Application 类</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── Config.java </span><span style="color:#B392F0">定义配置数据</span><span style="color:#E1E4E8">(常量)</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── base 基础组件</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── custom_view 自定义视图</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── data 数据处理</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   ├── DataManager.java 数据管理器，</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   ├── local 来源于本地的数据，比如 </span><span style="color:#79B8FF">SP</span><span style="color:#E1E4E8">，Database，File</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   ├── model 定义 </span><span style="color:#B392F0">model</span><span style="color:#E1E4E8">(数据结构以及 getter</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">setter、compareTo、equals 等等，不含复杂操作)</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   └── remote 来源于远端的数据</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── feature 功能</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   ├── feature0 功能 </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   │   ├── feature0Activity.java</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   │   ├── feature0Fragment.java</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   │   ├── xxAdapter.java</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   │   └── </span><span style="color:#F97583">...</span><span style="color:#E1E4E8"> 其他 </span><span style="color:#F97583">class</span></span>
+<span class="line"><span style="color:#E1E4E8">        │   └── ...</span><span style="color:#B392F0">其他功能</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── </span><span style="color:#B392F0">injection</span><span style="color:#B392F0"> 依赖注入</span></span>
+<span class="line"><span style="color:#E1E4E8">        ├── </span><span style="color:#B392F0">util</span><span style="color:#B392F0"> 工具类</span></span>
+<span class="line"><span style="color:#E1E4E8">        └── </span><span style="color:#B392F0">widget</span><span style="color:#B392F0"> 小部件</span></span>
+<span class="line"><span style="color:#B392F0">复制代码</span></span></code></pre>
+<h6 id="32-类名">3.2 类名</h6>
+<p>类名都以 <code>UpperCamelCase</code> 风格编写。</p>
+<p>类名通常是名词或名词短语，接口名称有时可能是形容词或形容词短语。现在还没有特定的规则或行之有效的约定来命名注解类型。</p>
+<p>名词，采用大驼峰命名法，尽量避免缩写，除非该缩写是众所周知的， 比如 HTML、URL，如果类名称中包含单词缩写，则单词缩写的每个字母均应大写。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类</th><th>描述</th><th>例如</th></tr></thead><tbody><tr><td>Activity 类</td><td>Activity 为后缀标识</td><td>欢迎页面类 WelcomeActivity</td></tr><tr><td>Adapter 类</td><td>Adapter 为后缀标识</td><td>新闻详情适配器 NewsDetailAdapter</td></tr><tr><td>解析类</td><td>Parser 为后缀标识</td><td>首页解析类 HomePosterParser</td></tr><tr><td>工具方法类</td><td>Utils 或 Manager 为后缀标识</td><td>线程池管理类：ThreadPoolManager 日志工具类：LogUtils(Logger 也可) 打印工具类：PrinterUtils</td></tr><tr><td>数据库类</td><td>以 DBHelper 后缀标识</td><td>新闻数据库：NewsDBHelper</td></tr><tr><td>Service 类</td><td>以 Service 为后缀标识</td><td>时间服务 TimeService</td></tr><tr><td>BroadcastReceiver 类</td><td>以 Receiver 为后缀标识</td><td>推送接收 JPushReceiver</td></tr><tr><td>ContentProvider 类</td><td>以 Provider 为后缀标识</td><td>ShareProvider</td></tr><tr><td>自定义的共享基础类</td><td>以 Base 开头</td><td>BaseActivity, BaseFragment</td></tr></tbody></table>
+<p>测试类的命名以它要测试的类的名称开始，以 Test 结束。例如：<code>HashTest</code> 或 <code>HashIntegrationTest</code>。</p>
+<p>接口(interface)：命名规则与类一样采用大驼峰命名法，多以 able 或 ible 结尾，如 <code>interface Runnable</code>、<code>interface Accessible</code>。</p>
+<blockquote>
+<p>注意：如果项目采用 MVP，所有 Model、View、Presenter 的接口都以 I 为前缀，不加后缀，其他的接口采用上述命名规则。</p>
+</blockquote>
+<h6 id="33-方法名">3.3 方法名</h6>
+<p>方法名都以 <code>lowerCamelCase</code> 风格编写。</p>
+<p>方法名通常是动词或动词短语。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>说明</th></tr></thead><tbody><tr><td>initXX()</td><td>初始化相关方法，使用 init 为前缀标识，如初始化布局 initView()</td></tr><tr><td>isXX(), checkXX()</td><td>方法返回值为 boolean 型的请使用 is/check 为前缀标识</td></tr><tr><td>getXX()</td><td>返回某个值的方法，使用 get 为前缀标识</td></tr><tr><td>setXX()</td><td>设置某个属性值</td></tr><tr><td>handleXX(), processXX()</td><td>对数据进行处理的方法</td></tr><tr><td>displayXX(), showXX()</td><td>弹出提示框和提示信息，使用 display/show 为前缀标识</td></tr><tr><td>updateXX()</td><td>更新数据</td></tr><tr><td>saveXX(), insertXX()</td><td>保存或插入数据</td></tr><tr><td>resetXX()</td><td>重置数据</td></tr><tr><td>clearXX()</td><td>清除数据</td></tr><tr><td>removeXX(), deleteXX()</td><td>移除数据或者视图等，如 removeView()</td></tr><tr><td>drawXX()</td><td>绘制数据或效果相关的，使用 draw 前缀标识</td></tr></tbody></table>
+<h6 id="34-常量名">3.4 常量名</h6>
+<p>常量名命名模式为 <code>CONSTANT_CASE</code>，全部字母大写，用下划线分隔单词。那到底什么算是一个常量？</p>
+<p>每个常量都是一个 <code>static final</code> 字段，但不是所有 <code>static final</code> 字段都是常量。在决定一个字段是否是一个常量时，得考虑它是否真的感觉像是一个常量。例如，如果观测任何一个该实例的状态是可变的，则它几乎肯定不会是一个常量。只是永远不打算改变的对象一般是不够的，它要真的一直不变才能将它示为常量。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// Constants</span></span>
+<span class="line"><span style="color:#E1E4E8">static final int </span><span style="color:#79B8FF">NUMBER</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">static final ImmutableListNAMES </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ImmutableList.</span><span style="color:#B392F0">of</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Ed"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Ann"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">static final Joiner </span><span style="color:#79B8FF">COMMA_JOINER</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> Joiner.</span><span style="color:#B392F0">on</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">','</span><span style="color:#E1E4E8">); </span><span style="color:#6A737D">// because Joiner is immutable</span></span>
+<span class="line"><span style="color:#E1E4E8">static final SomeMutableType[] </span><span style="color:#79B8FF">EMPTY_ARRAY</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {};</span></span>
+<span class="line"><span style="color:#F97583">enum</span><span style="color:#B392F0"> SomeEnum</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">ENUM_CONSTANT</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Not constants</span></span>
+<span class="line"><span style="color:#E1E4E8">static String nonFinal </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "non-final"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">final String nonStatic </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "non-static"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">static final SetmutableCollection </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> HashSet</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">static final ImmutableSetmutableElements </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ImmutableSet.</span><span style="color:#B392F0">of</span><span style="color:#E1E4E8">(mutable);</span></span>
+<span class="line"><span style="color:#E1E4E8">static final Logger logger </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Logger.</span><span style="color:#B392F0">getLogger</span><span style="color:#E1E4E8">(MyClass.</span><span style="color:#B392F0">getName</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String[] nonEmptyArray </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">"these"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"can"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"change"</span><span style="color:#E1E4E8">};</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="35-非常量字段名">3.5 非常量字段名</h6>
+<p>非常量字段名以 <code>lowerCamelCase</code> 风格的基础上改造为如下风格：基本结构为 <code>scope{Type0}VariableName{Type1}</code>、<code>type0VariableName{Type1}</code>、<code>variableName{Type1}</code>。</p>
+<p>说明：<code>{}</code> 中的内容为可选。</p>
+<blockquote>
+<p>注意：所有的 VO(值对象)统一采用标准的 lowerCamelCase 风格编写，所有的 DTO(数据传输对象)就按照接口文档中定义的字段名编写。</p>
+</blockquote>
+<h6 id="351-scope范围">3.5.1 scope(范围)</h6>
+<p>非公有，非静态字段命名以 <code>m</code> 开头。</p>
+<p>静态字段命名以 <code>s</code> 开头。</p>
+<p>其他字段以小写字母开头。</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> MyClass</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#E1E4E8"> int </span><span style="color:#FFAB70">publicField</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> static</span><span style="color:#E1E4E8"> MyClass </span><span style="color:#FFAB70">sSingleton</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    int </span><span style="color:#FFAB70">mPackagePrivate</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#E1E4E8"> int </span><span style="color:#FFAB70">mPrivate</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#E1E4E8"> int </span><span style="color:#FFAB70">mProtected</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>使用 1 个字符前缀来表示作用范围，1 个字符的前缀必须小写，前缀后面是由表意性强的一个单词或多个单词组成的名字，而且每个单词的首写字母大写，其它字母小写，这样保证了对变量名能够进行正确的断句。</p>
+<h6 id="352-type0控件类型">3.5.2 Type0(控件类型)</h6>
+<p>考虑到 Android 众多的 UI 控件，为避免控件和普通成员变量混淆以及更好地表达意思，所有用来表示控件的成员变量统一加上控件缩写作为前缀(具体见附录 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fjuejin.im%2Fpost%2F6844903518776590349%23ui-&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined">UI 控件缩写表</a>)。</p>
+<p>例如：<code>mIvAvatar</code>、<code>rvBooks</code>、<code>flContainer</code>。</p>
+<h6 id="353-variablename变量名">3.5.3 VariableName(变量名)</h6>
+<p>变量名中可能会出现量词，我们需要创建统一的量词，它们更容易理解，也更容易搜索。</p>
+<p>例如：<code>mFirstBook</code>、<code>mPreBook</code>、<code>curBook</code>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>量词列表</th><th>量词后缀说明</th></tr></thead><tbody><tr><td>First</td><td>一组变量中的第一个</td></tr><tr><td>Last</td><td>一组变量中的最后一个</td></tr><tr><td>Next</td><td>一组变量中的下一个</td></tr><tr><td>Pre</td><td>一组变量中的上一个</td></tr><tr><td>Cur</td><td>一组变量中的当前变量</td></tr></tbody></table>
+<h6 id="354-type1数据类型">3.5.4 Type1(数据类型)</h6>
+<p>对于表示集合或者数组的非常量字段名，我们可以添加后缀来增强字段的可读性，比如：</p>
+<p>集合添加如下后缀：List、Map、Set。</p>
+<p>数组添加如下后缀：Arr。</p>
+<p>例如：<code>mIvAvatarList</code>、<code>userArr</code>、<code>firstNameSet</code>。</p>
+<blockquote>
+<p>注意：如果数据类型不确定的话，比如表示的是很多书，那么使用其复数形式来表示也可，例如 <code>mBooks</code>。</p>
+</blockquote>
+<h6 id="36-参数名">3.6 参数名</h6>
+<p>参数名以 <code>lowerCamelCase</code> 风格编写，参数应该避免用单个字符命名。</p>
+<h6 id="37-局部变量名">3.7 局部变量名</h6>
+<p>局部变量名以 <code>lowerCamelCase</code> 风格编写，比起其它类型的名称，局部变量名可以有更为宽松的缩写。</p>
+<p>虽然缩写更宽松，但还是要避免用单字符进行命名，除了临时变量和循环变量。</p>
+<p>即使局部变量是 <code>final</code> 和不可改变的，也不应该把它示为常量，自然也不能用常量的规则去命名它。</p>
+<h6 id="38-临时变量">3.8 临时变量</h6>
+<p>临时变量通常被取名为 <code>i</code>、<code>j</code>、<code>k</code>、<code>m</code> 和 <code>n</code>，它们一般用于整型；<code>c</code>、<code>d</code>、<code>e</code>，它们一般用于字符型。 如：<code>for (int i = 0; i &#x3C; len; i++)</code>。</p>
+<h6 id="39-类型变量名">3.9 类型变量名</h6>
+<p>类型变量可用以下两种风格之一进行命名：</p>
+<ol>
+<li>单个的大写字母，后面可以跟一个数字(如：<code>E</code>, <code>T</code>, <code>X</code>, <code>T2</code>)。</li>
+<li>以类命名方式(参考<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fjuejin.im%2Fpost%2F6844903518776590349%2332-&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined">3.2 类名</a>)，后面加个大写的 T(如：<code>RequestT</code>, <code>FooBarT</code>)。</li>
+</ol>
+<p>更多还可参考：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Falibaba%2Fp3c%2Fblob%2Fmaster%2F&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>阿里巴巴 Java 开发手册</strong></a></p>
+<h5 id="4-代码样式规范">4 代码样式规范</h5>
+<h6 id="41-使用标准大括号样式">4.1 使用标准大括号样式</h6>
+<p>左大括号不单独占一行，与其前面的代码位于同一行：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> MyClass</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    int </span><span style="color:#B392F0">func</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> (something) {</span></span>
+<span class="line"><span style="color:#6A737D">            // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">        } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (somethingElse) {</span></span>
+<span class="line"><span style="color:#6A737D">            // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">        } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">            // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>我们需要在条件语句周围添加大括号。例外情况：如果整个条件语句(条件和主体)适合放在同一行，那么您可以(但不是必须)将其全部放在一行上。例如，我们接受以下样式：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (condition) {</span></span>
+<span class="line"><span style="color:#B392F0">  body</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>同样也接受以下样式：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (condition) </span><span style="color:#B392F0">body</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>但不接受以下样式：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (condition) </span><span style="color:#B392F0">body</span><span style="color:#E1E4E8">(); </span><span style="color:#6A737D">// bad!</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<h6 id="42-编写简短方法">4.2 编写简短方法</h6>
+<p>在可行的情况下，尽量编写短小精炼的方法。我们了解，有些情况下较长的方法是恰当的，因此对方法的代码长度没有做出硬性限制。如果某个方法的代码超出 40 行，请考虑是否可以在不破坏程序结构的前提下对其拆解。</p>
+<h6 id="43-类成员的顺序">4.3 类成员的顺序</h6>
+<p>这并没有唯一的正确解决方案，但如果都使用一致的顺序将会提高代码的可读性，推荐使用如下排序：</p>
+<ol>
+<li>常量</li>
+<li>字段</li>
+<li>构造函数</li>
+<li>重写函数和回调</li>
+<li>公有函数</li>
+<li>私有函数</li>
+<li>内部类或接口</li>
+</ol>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> MainActivity</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> static</span><span style="color:#E1E4E8"> final String </span><span style="color:#FFAB70">TAG</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> MainActivity.class.</span><span style="color:#B392F0">getSimpleName</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#E1E4E8"> String </span><span style="color:#FFAB70">mTitle</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#E1E4E8"> TextView </span><span style="color:#FFAB70">mTextViewTitle</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">        ...</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> setTitle</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">String</span><span style="color:#FFAB70"> title</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        mTitle </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> title;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> setUpView</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">        ...</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    static</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AnInnerClass</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>如果类继承于 Android 组件(例如 <code>Activity</code> 或 <code>Fragment</code>)，那么把重写函数按照他们的生命周期进行排序是一个非常好的习惯，例如，<code>Activity</code> 实现了 <code>onCreate()</code>、<code>onDestroy()</code>、<code>onPause()</code>、<code>onResume()</code>，它的正确排序如下所示：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> MainActivity</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">    //Order matches Activity lifecycle</span></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">() {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onResume</span><span style="color:#E1E4E8">() {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onPause</span><span style="color:#E1E4E8">() {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onDestroy</span><span style="color:#E1E4E8">() {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="44-函数参数的排序">4.4 函数参数的排序</h6>
+<p>在 Android 开发过程中，<code>Context</code> 在函数参数中是再常见不过的了，我们最好把 <code>Context</code> 作为其第一个参数。</p>
+<p>正相反，我们把回调接口应该作为其最后一个参数。</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// Context always goes first</span></span>
+<span class="line"><span style="color:#E1E4E8">public User </span><span style="color:#B392F0">loadUser</span><span style="color:#E1E4E8">(Context context, int userId);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Callbacks always go last</span></span>
+<span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">void</span><span style="color:#B392F0"> loadUserAsync</span><span style="color:#E1E4E8">(Context context, int userId, UserCallback callback);</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="45-字符串常量的命名和值">4.5 字符串常量的命名和值</h6>
+<p>Android SDK 中的很多类都用到了键值对函数，比如 <code>SharedPreferences</code>、<code>Bundle</code>、<code>Intent</code>，所以，即便是一个小应用，我们最终也不得不编写大量的字符串常量。</p>
+<p>当时用到这些类的时候，我们 <strong>必须</strong> 将它们的键定义为 <code>static final</code> 字段，并遵循以下指示作为前缀。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类</th><th>字段名前缀</th></tr></thead><tbody><tr><td>SharedPreferences</td><td>PREF_</td></tr><tr><td>Bundle</td><td>BUNDLE_</td></tr><tr><td>Fragment Arguments</td><td>ARGUMENT_</td></tr><tr><td>Intent Extra</td><td>EXTRA_</td></tr><tr><td>Intent Action</td><td>ACTION_</td></tr></tbody></table>
+<p>说明：虽然 <code>Fragment.getArguments()</code> 得到的也是 <code>Bundle</code> ，但因为这是 <code>Bundle</code> 的常用用法，所以特意为此定义一个不同的前缀。</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// 注意：字段的值与名称相同以避免重复问题</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String </span><span style="color:#79B8FF">PREF_EMAIL</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "PREF_EMAIL"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String </span><span style="color:#79B8FF">BUNDLE_AGE</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "BUNDLE_AGE"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String </span><span style="color:#79B8FF">ARGUMENT_USER_ID</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "ARGUMENT_USER_ID"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 与意图相关的项使用完整的包名作为值的前缀</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String </span><span style="color:#79B8FF">EXTRA_SURNAME</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "com.myapp.extras.EXTRA_SURNAME"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">static final String </span><span style="color:#79B8FF">ACTION_OPEN_USER</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "com.myapp.action.ACTION_OPEN_USER"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="46-activities-和-fragments-的传参">4.6 Activities 和 Fragments 的传参</h6>
+<p>当 <code>Activity</code> 或 <code>Fragment</code> 传递数据通过 <code>Intent</code> 或 <code>Bundle</code> 时，不同值的键须遵循上一条所提及到的。</p>
+<p>当 <code>Activity</code> 或 <code>Fragment</code> 启动需要传递参数时，那么它需要提供一个 <code>public static</code> 的函数来帮助启动或创建它。</p>
+<p>这方面，AS 已帮你写好了相关的 Live Templates，启动相关 <code>Activity</code> 的只需要在其内部输入 <code>starter</code> 即可生成它的启动器，如下所示：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public static </span><span style="color:#F97583">void</span><span style="color:#B392F0"> start</span><span style="color:#E1E4E8">(Context context, User user) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      Intent starter </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Intent</span><span style="color:#E1E4E8">(context, MainActivity.class);</span></span>
+<span class="line"><span style="color:#E1E4E8">      starter.</span><span style="color:#B392F0">putParcelableExtra</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">EXTRA_USER</span><span style="color:#E1E4E8">, user);</span></span>
+<span class="line"><span style="color:#E1E4E8">      context.</span><span style="color:#B392F0">startActivity</span><span style="color:#E1E4E8">(starter);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>同理，启动相关 <code>Fragment</code> 在其内部输入 <code>newInstance</code> 即可，如下所示：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public static MainFragment </span><span style="color:#B392F0">newInstance</span><span style="color:#E1E4E8">(User user) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      Bundle args </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Bundle</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">      args.</span><span style="color:#B392F0">putParcelable</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">ARGUMENT_USER</span><span style="color:#E1E4E8">, user);</span></span>
+<span class="line"><span style="color:#E1E4E8">      MainFragment fragment </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> MainFragment</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">      fragment.</span><span style="color:#B392F0">setArguments</span><span style="color:#E1E4E8">(args);</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> fragment;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<blockquote>
+<p>注意：这些函数需要放在 <code>onCreate()</code> 之前的类的顶部；如果我们使用了这种方式，那么 <code>extras</code> 和 <code>arguments</code> 的键应该是 <code>private</code> 的，因为它们不再需要暴露给其他类来使用。</p>
+</blockquote>
+<h6 id="47-行长限制">4.7 行长限制</h6>
+<p>代码中每一行文本的长度都应该不超过 100 个字符。虽然关于此规则存在很多争论，但最终决定仍是以 100 个字符为上限，如果行长超过了 100(AS 窗口右侧的竖线就是设置的行宽末尾 )，我们通常有两种方法来缩减行长。</p>
+<ul>
+<li>提取一个局部变量或方法(最好)。</li>
+<li>使用换行符将一行换成多行。</li>
+</ul>
+<p>不过存在以下例外情况：</p>
+<ul>
+<li>如果备注行包含长度超过 100 个字符的示例命令或文字网址，那么为了便于剪切和粘贴，该行可以超过 100 个字符。</li>
+<li>导入语句行可以超出此限制，因为用户很少会看到它们(这也简化了工具编写流程)。</li>
+</ul>
+<h6 id="471-换行策略">4.7.1 换行策略</h6>
+<p>这没有一个准确的解决方案来决定如何换行，通常不同的解决方案都是有效的，但是有一些规则可以应用于常见的情况。</p>
+<h6 id="4711-操作符的换行">4.7.1.1 操作符的换行</h6>
+<p>除赋值操作符之外，我们把换行符放在操作符之前，例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">int longName </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> anotherVeryLongVariable </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> anEvenLongerOne </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> thisRidiculousLongOne</span></span>
+<span class="line"><span style="color:#F97583">        +</span><span style="color:#E1E4E8"> theFinalOne;</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>赋值操作符的换行我们放在其后，例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">int longName </span><span style="color:#F97583">=</span></span>
+<span class="line"><span style="color:#E1E4E8">        anotherVeryLongVariable </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> anEvenLongerOne </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> thisRidiculousLongOne </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> theFinalOne;</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="4712-函数链的换行">4.7.1.2 函数链的换行</h6>
+<p>当同一行中调用多个函数时(比如使用构建器时)，对每个函数的调用应该在新的一行中，我们把换行符插入在 <code>.</code> 之前。</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">Picasso.</span><span style="color:#B392F0">with</span><span style="color:#E1E4E8">(context)</span></span>
+<span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">load</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"https://blankj.com/images/avatar.jpg"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">into</span><span style="color:#E1E4E8">(ivAvatar);</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>我们应该使用如下规则：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">Picasso.</span><span style="color:#B392F0">with</span><span style="color:#E1E4E8">(context)</span></span>
+<span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">load</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"https://blankj.com/images/avatar.jpg"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  .</span><span style="color:#B392F0">into</span><span style="color:#E1E4E8">(ivAvatar);</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<h6 id="4713-多参数的换行">4.7.1.3 多参数的换行</h6>
+<p>当一个方法有很多参数或者参数很长的时候，我们应该在每个 <code>,</code> 后面进行换行。</p>
+<p>比如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#B392F0">loadPicture</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">  context,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "https://blankj.com/images/avatar.jpg"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ivAvatar,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "Avatar of the user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  clickListener</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>我们应该使用如下规则：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#B392F0">loadPicture</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">  context,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "https://blankj.com/images/avatar.jpg"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  ivAvatar,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "Avatar of the user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  clickListener</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<h6 id="4714-rxjava-链式的换行">4.7.1.4 RxJava 链式的换行</h6>
+<p>RxJava 的每个操作符都需要换新行，并且把换行符插入在 <code>.</code> 之前。</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public Observable</span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">Location</span><span style="color:#F97583">></span><span style="color:#B392F0"> syncLocations</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> mDatabaseHelper.</span><span style="color:#B392F0">getAllLocations</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">            .</span><span style="color:#B392F0">concatMap</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">new</span><span style="color:#E1E4E8"> Func1</span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">Location, Observable</span><span style="color:#F97583">&#x3C;?</span><span style="color:#E1E4E8"> extends Location</span><span style="color:#F97583">>></span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">                @Override</span></span>
+<span class="line"><span style="color:#E1E4E8">                 public Observable&#x3C;? extends Location> </span><span style="color:#B392F0">call</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Location</span><span style="color:#FFAB70"> location</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">                     return</span><span style="color:#E1E4E8"> mRetrofitService.</span><span style="color:#B392F0">getLocation</span><span style="color:#E1E4E8">(location.id);</span></span>
+<span class="line"><span style="color:#E1E4E8">                 }</span></span>
+<span class="line"><span style="color:#E1E4E8">            })</span></span>
+<span class="line"><span style="color:#E1E4E8">            .</span><span style="color:#B392F0">retry</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">new</span><span style="color:#B392F0"> Func2</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">Integer</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">Throwable</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">Boolean</span><span style="color:#E1E4E8">>() {</span></span>
+<span class="line"><span style="color:#E1E4E8">                 @Override</span></span>
+<span class="line"><span style="color:#E1E4E8">                 public Boolean </span><span style="color:#B392F0">call</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Integer</span><span style="color:#FFAB70"> numRetries</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">Throwable</span><span style="color:#FFAB70"> throwable</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">                     return</span><span style="color:#E1E4E8"> throwable </span><span style="color:#F97583">instanceof</span><span style="color:#B392F0"> RetrofitError</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">                 }</span></span>
+<span class="line"><span style="color:#E1E4E8">            });</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h5 id="5-资源文件规范">5 资源文件规范</h5>
+<p>资源文件命名为全部小写，采用下划线命名法。</p>
+<p>如果是组件化开发，我们可以在组件和公共模块间创建一个 ui 模块来专门存放资源文件，然后让每个组件都依赖 ui 模块。这样做的好处是如果老项目要实现组件化的话，只需把资源文件都放入 ui 模块即可，如果想对资源文件进行分包，可以参考我这篇文章：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fblankj.com%2F2016%2F09%2F21%2Fandroid-studio-classify-src-package%2F&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Android Studio 下对资源进行分包</strong></a>；还避免了多个模块间资源不能复用的问题。</p>
+<p>如果是三方库开发，其使用到的资源文件及相关的 <code>name</code> 都应该使用库名作为前缀，这样做可以避免三方库资源和实际应用资源重名的冲突。</p>
+<h6 id="51-动画资源文件anim-和-animator">5.1 动画资源文件(anim/ 和 animator/)</h6>
+<p>安卓主要包含属性动画和视图动画，其视图动画包括补间动画和逐帧动画。属性动画文件需要放在 <code>res/animator/</code> 目录下，视图动画文件需放在 <code>res/anim/</code> 目录下。</p>
+<p>命名规则：<code>{模块名_}逻辑名称</code>。</p>
+<p>说明：<code>{}</code> 中的内容为可选，<code>逻辑名称</code> 可由多个单词加下划线组成。</p>
+<p>例如：<code>refresh_progress.xml</code>、<code>market_cart_add.xml</code>、<code>market_cart_remove.xml</code>。</p>
+<p>如果是普通的补间动画或者属性动画，可采用：<code>动画类型_方向</code> 的命名方式。</p>
+<p>例如：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>fade_in</td><td>淡入</td></tr><tr><td>fade_out</td><td>淡出</td></tr><tr><td>push_down_in</td><td>从下方推入</td></tr><tr><td>push_down_out</td><td>从下方推出</td></tr><tr><td>push_left</td><td>推向左方</td></tr><tr><td>slide_in_from_top</td><td>从头部滑动进入</td></tr><tr><td>zoom_enter</td><td>变形进入</td></tr><tr><td>slide_in</td><td>滑动进入</td></tr><tr><td>shrink_to_middle</td><td>中间缩小</td></tr></tbody></table>
+<h6 id="52-颜色资源文件color">5.2 颜色资源文件(color/)</h6>
+<p>专门存放颜色相关的资源文件。</p>
+<p>命名规则：<code>类型{_模块名}_逻辑名称</code>。</p>
+<p>说明：<code>{}</code> 中的内容为可选。</p>
+<p>例如：<code>sel_btn_font.xml</code>。</p>
+<p>颜色资源也可以放于 <code>res/drawable/</code> 目录，引用时则用 <code>@drawable</code> 来引用，但不推荐这么做，最好还是把两者分开。</p>
+<h6 id="53-图片资源文件drawable-和-mipmap">5.3 图片资源文件(drawable/ 和 mipmap/)</h6>
+<p><code>res/drawable/</code> 目录下放的是位图文件(.png、.9.png、.jpg、.gif)或编译为可绘制对象资源子类型的 XML 文件，而 <code>res/mipmap/</code> 目录下放的是不同密度的启动图标，所以 <code>res/mipmap/</code> 只用于存放启动图标，其余图片资源文件都应该放到 <code>res/drawable/</code> 目录下。</p>
+<p>命名规则：<code>类型{_模块名}_逻辑名称</code>、<code>类型{_模块名}_颜色</code>。</p>
+<p>说明：<code>{}</code> 中的内容为可选；<code>类型</code> 可以是<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fjuejin.im%2Fpost%2F&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined">可绘制对象资源类型</a>，也可以是控件类型(具体见附录<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fjuejin.im%2Fpost%2F6844903518776590349%23ui-&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined">UI 控件缩写表</a>)；最后可加后缀 <code>_small</code> 表示小图，<code>_big</code> 表示大图。</p>
+<p>例如：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>btn_main_about.png</td><td>主页关于按键 类型<em>模块名</em>逻辑名称</td></tr><tr><td>btn_back.png</td><td>返回按键 类型_逻辑名称</td></tr><tr><td>divider_maket_white.png</td><td>商城白色分割线 类型<em>模块名</em>颜色</td></tr><tr><td>ic_edit.png</td><td>编辑图标 类型_逻辑名称</td></tr><tr><td>bg_main.png</td><td>主页背景 类型_逻辑名称</td></tr><tr><td>btn_red.png</td><td>红色按键 类型_颜色</td></tr><tr><td>btn_red_big.png</td><td>红色大按键 类型_颜色</td></tr><tr><td>ic_head_small.png</td><td>小头像图标 类型_逻辑名称</td></tr><tr><td>bg_input.png</td><td>输入框背景 类型_逻辑名称</td></tr><tr><td>divider_white.png</td><td>白色分割线 类型_颜色</td></tr><tr><td>bg_main_head.png</td><td>主页头部背景 类型<em>模块名</em>逻辑名称</td></tr><tr><td>def_search_cell.png</td><td>搜索页面默认单元图片 类型<em>模块名</em>逻辑名称</td></tr><tr><td>ic_more_help.png</td><td>更多帮助图标 类型_逻辑名称</td></tr><tr><td>divider_list_line.png</td><td>列表分割线 类型_逻辑名称</td></tr><tr><td>sel_search_ok.xml</td><td>搜索界面确认选择器 类型<em>模块名</em>逻辑名称</td></tr><tr><td>shape_music_ring.xml</td><td>音乐界面环形形状 类型<em>模块名</em>逻辑名称</td></tr></tbody></table>
+<p>如果有多种形态，如按钮选择器：<code>sel_btn_xx.xml</code>，采用如下命名：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>sel_btn_xx</td><td>作用在 btn_xx 上的 selector</td></tr><tr><td>btn_xx_normal</td><td>默认状态效果</td></tr><tr><td>btn_xx_pressed</td><td>state_pressed 点击效果</td></tr><tr><td>btn_xx_focused</td><td>state_focused 聚焦效果</td></tr><tr><td>btn_xx_disabled</td><td>state_enabled 不可用效果</td></tr><tr><td>btn_xx_checked</td><td>state_checked 选中效果</td></tr><tr><td>btn_xx_selected</td><td>state_selected 选中效果</td></tr><tr><td>btn_xx_hovered</td><td>state_hovered 悬停效果</td></tr><tr><td>btn_xx_checkable</td><td>state_checkable 可选效果</td></tr><tr><td>btn_xx_activated</td><td>state_activated 激活效果</td></tr><tr><td>btn_xx_window_focused</td><td>state_window_focused 窗口聚焦效果</td></tr></tbody></table>
+<blockquote>
+<p>注意：使用 Android Studio 的插件 SelectorChapek 可以快速生成 selector，前提是命名要规范。</p>
+</blockquote>
+<h6 id="54-布局资源文件layout">5.4 布局资源文件(layout/)</h6>
+<p>命名规则：<code>类型_模块名</code>、<code>类型{_模块名}_逻辑名称</code>。</p>
+<p>说明：<code>{}</code> 中的内容为可选。</p>
+<p>例如：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>activity_main.xml</td><td>主窗体 类型_模块名</td></tr><tr><td>activity_main_head.xml</td><td>主窗体头部 类型<em>模块名</em>逻辑名称</td></tr><tr><td>fragment_music.xml</td><td>音乐片段 类型_模块名</td></tr><tr><td>fragment_music_player.xml</td><td>音乐片段的播放器 类型<em>模块名</em>逻辑名称</td></tr><tr><td>dialog_loading.xml</td><td>加载对话框 类型_逻辑名称</td></tr><tr><td>ppw_info.xml</td><td>信息弹窗(PopupWindow) 类型_逻辑名称</td></tr><tr><td>item_main_song.xml</td><td>主页歌曲列表项 类型<em>模块名</em>逻辑名称</td></tr></tbody></table>
+<h6 id="55-菜单资源文件menu">5.5 菜单资源文件(menu/)</h6>
+<p>菜单相关的资源文件应放在该目录下。</p>
+<p>命名规则：<code>{模块名_}逻辑名称</code></p>
+<p>说明：<code>{}</code> 中的内容为可选。</p>
+<p>例如：<code>main_drawer.xml</code>、<code>navigation.xml</code>。</p>
+<h6 id="56-values-资源文件values">5.6 values 资源文件(values/)</h6>
+<p><code>values/</code> 资源文件下的文件都以 <code>s</code> 结尾，如 <code>attrs.xml</code>、<code>colors.xml</code>、<code>dimens.xml</code>，起作用的不是文件名称，而是 <code>&#x3C;resources></code> 标签下的各种标签，比如 <code>&#x3C;style></code> 决定样式，<code>&#x3C;color></code> 决定颜色，所以，可以把一个大的 <code>xml</code> 文件分割成多个小的文件，比如可以有多个 <code>style</code> 文件，如 <code>styles.xml</code>、<code>styles_home.xml</code>、<code>styles_item_details.xml</code>、<code>styles_forms.xml</code>。</p>
+<h6 id="561-colorsxml">5.6.1 colors.xml</h6>
+<p><code>&#x3C;color></code> 的 <code>name</code> 命名使用下划线命名法，在你的 <code>colors.xml</code> 文件中应该只是映射颜色的名称一个 ARGB 值，而没有其它的。不要使用它为不同的按钮来定义 ARGB 值。</p>
+<p>例如，不要像下面这样做：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">resources</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"button_foreground"</span><span style="color:#E1E4E8">>#FFFFFF&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"button_background"</span><span style="color:#E1E4E8">>#2A91BD&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"comment_background_inactive"</span><span style="color:#E1E4E8">>#5F5F5F&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"comment_background_active"</span><span style="color:#E1E4E8">>#939393&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"comment_foreground"</span><span style="color:#E1E4E8">>#FFFFFF&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"comment_foreground_important"</span><span style="color:#E1E4E8">>#FF9D2F&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      ...</span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"comment_shadow"</span><span style="color:#E1E4E8">>#323232&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>使用这种格式，会非常容易重复定义 ARGB 值，而且如果应用要改变基色的话会非常困难。同时，这些定义是跟一些环境关联起来的，如 <code>button</code> 或者 <code>comment</code>，应该放到一个按钮风格中，而不是在 <code>colors.xml</code> 文件中。</p>
+<p>相反，应该这样做：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">resources</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;!-- grayscale --></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"white"</span><span style="color:#E1E4E8">     >#FFFFFF&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gray_light"</span><span style="color:#E1E4E8">>#DBDBDB&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gray"</span><span style="color:#E1E4E8">      >#939393&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gray_dark"</span><span style="color:#E1E4E8"> >#5F5F5F&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"black"</span><span style="color:#E1E4E8">     >#323232&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;!-- basic colors --></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"green"</span><span style="color:#E1E4E8">>#27D34D&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"blue"</span><span style="color:#E1E4E8">>#2A91BD&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"orange"</span><span style="color:#E1E4E8">>#FF9D2F&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">      &#x3C;</span><span style="color:#85E89D">color</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"red"</span><span style="color:#E1E4E8">>#FF432F&#x3C;/</span><span style="color:#85E89D">color</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  &#x3C;/</span><span style="color:#85E89D">resources</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>向应用设计者那里要这个调色板，名称不需要跟 <code>"green"</code>、<code>"blue"</code> 等等相同。<code>"brand_primary"</code>、<code>"brand_secondary"</code>、<code>"brand_negative"</code> 这样的名字也是完全可以接受的。像这样规范的颜色很容易修改或重构，会使应用一共使用了多少种不同的颜色变得非常清晰。通常一个具有审美价值的 UI 来说，减少使用颜色的种类是非常重要的。</p>
+<blockquote>
+<p>注意：如果某些颜色和主题有关，那就单独写一个 <code>colors_theme.xml</code>。</p>
+</blockquote>
+<h6 id="562-dimensxml">5.6.2 dimens.xml</h6>
+<p>像对待 <code>colors.xml</code> 一样对待 <code>dimens.xml</code> 文件，与定义颜色调色板一样，你同时也应该定义一个空隙间隔和字体大小的“调色板”。 一个好的例子，如下所示：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">resources</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;!-- font sizes --></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"font_22"</span><span style="color:#E1E4E8">>22sp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"font_18"</span><span style="color:#E1E4E8">>18sp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"font_15"</span><span style="color:#E1E4E8">>15sp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"font_12"</span><span style="color:#E1E4E8">>12sp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;!-- typical spacing between two views --></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"spacing_40"</span><span style="color:#E1E4E8">>40dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"spacing_24"</span><span style="color:#E1E4E8">>24dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"spacing_14"</span><span style="color:#E1E4E8">>14dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"spacing_10"</span><span style="color:#E1E4E8">>10dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"spacing_4"</span><span style="color:#E1E4E8">>4dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;!-- typical sizes of views --></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"button_height_60"</span><span style="color:#E1E4E8">>60dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"button_height_40"</span><span style="color:#E1E4E8">>40dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">dimen</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"button_height_32"</span><span style="color:#E1E4E8">>32dp&#x3C;/</span><span style="color:#85E89D">dimen</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&#x3C;/</span><span style="color:#85E89D">resources</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>布局时在写 <code>margins</code> 和 <code>paddings</code> 时，你应该使用 <code>spacing_xx</code> 尺寸格式来布局，而不是像对待 <code>string</code> 字符串一样直接写值，像这样规范的尺寸很容易修改或重构，会使应用所有用到的尺寸一目了然。 这样写会非常有感觉，会使组织和改变风格或布局非常容易。</p>
+<h6 id="563-stringsxml">5.6.3 strings.xml</h6>
+<p><code>&#x3C;string></code> 的 <code>name</code> 命名使用下划线命名法，采用以下规则：<code>{模块名_}逻辑名称</code>，这样方便同一个界面的所有 <code>string</code> 都放到一起，方便查找。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>说明</th></tr></thead><tbody><tr><td>main_menu_about</td><td>主菜单按键文字</td></tr><tr><td>friend_title</td><td>好友模块标题栏</td></tr><tr><td>friend_dialog_del</td><td>好友删除提示</td></tr><tr><td>login_check_email</td><td>登录验证</td></tr><tr><td>dialog_title</td><td>弹出框标题</td></tr><tr><td>button_ok</td><td>确认键</td></tr><tr><td>loading</td><td>加载文字</td></tr></tbody></table>
+<h6 id="564-stylesxml">5.6.4 styles.xml</h6>
+<style> 的 name 命名使用大驼峰命名法，几乎每个项目都需要适当的使用 styles.xml 文件，因为对于一个视图来说，有一个重复的外观是很常见的，将所有的外观细节属性(colors、padding、font)放在 styles.xml 文件中。 在应用中对于大多数文本内容，最起码你应该有一个通用的 styles.xml 文件，例如：
+
+代码语言：javascript
+
+ 
+
+AI代码解释
+
+ 
+
+```javascript
+<style name="ContentText">
+    <item name="android:textSize">@dimen/font_normal</item>
+    <item name="android:textColor">@color/basic_black</item>
+</style>
+<p>复制代码</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
+<span class="line"><span>应用到 `TextView` 中：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>代码语言：javascript</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>AI代码解释</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```javascript</span></span>
+<span class="line"><span>&#x3C;TextView</span></span>
+<span class="line"><span>    android:layout_width="wrap_content"</span></span>
+<span class="line"><span>    android:layout_height="wrap_content"</span></span>
+<span class="line"><span>    android:text="@string/price"</span></span>
+<span class="line"><span>    style="@style/ContentText"</span></span>
+<span class="line"><span>    /></span></span>
+<span class="line"><span>复制代码</span></span></code></pre>
+<p>或许你需要为按钮控件做同样的事情，不要停止在那里，将一组相关的和重复 <code>android:xxxx</code> 的属性放到一个通用的 <code>&#x3C;style></code> 中。</p>
+<h6 id="57-id-命名">5.7 id 命名</h6>
+<p>命名规则：<code>view 缩写{_模块名}_逻辑名</code>，例如： <code>btn_main_search</code>、<code>btn_back</code>。</p>
+<p>如果在项目中有用黄油刀的话，使用 AS 的插件：ButterKnife Zelezny，可以非常方便帮助你生成注解；没用黄油刀的话可以使用 Android Code Generator 插件。</p>
+<h5 id="6-版本统一规范">6 版本统一规范</h5>
+<p>Android 开发存在着众多版本的不同，比如 <code>compileSdkVersion</code>、<code>minSdkVersion</code>、<code>targetSdkVersion</code> 以及项目中依赖第三方库的版本，不同的 module 及不同的开发人员都有不同的版本，所以需要一个统一版本规范的文件。</p>
+<p>具体可以参考我写的这篇博文：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fblankj.com%2F2016%2F09%2F21%2Fandroid-keep-version-unity%2F&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Android 开发之版本统一规范</strong></a>。</p>
+<p>如果是开发多个系统级别的应用，当多个应用同时用到相同的 <code>so</code> 库时，一定要确保 <code>so</code> 库的版本一致，否则可能会引发应用崩溃。</p>
+<h5 id="7-第三方库规范">7 第三方库规范</h5>
+<p>别再闭门造车了，用用最新最火的技术吧，安利一波：<strong>Android 流行框架查速表</strong>，顺便带上自己的干货：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2FBlankj%2FAndroidUtilCode&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Android 开发人员不得不收集的代码</strong></a>。</p>
+<p>希望 Team 能用时下较新的技术，对开源库的选取，一般都需要选择比较稳定的版本，作者在维护的项目，要考虑作者对 issue 的解决，以及开发者的知名度等各方面。选取之后，一定的封装是必要的。</p>
+<p>个人推荐 Team 可使用如下优秀轮子：</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fsquare%2Fretrofit&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Retrofit</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2FReactiveX%2FRxAndroid&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>RxAndroid</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fsquare%2Fokhttp&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>OkHttp</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fbumptech%2Fglide&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Glide</strong></a>/<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Ffacebook%2Ffresco&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Fresco</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fgoogle%2Fgson&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Gson</strong></a>/<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Falibaba%2Ffastjson&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Fastjson</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fgreenrobot%2FEventBus&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>EventBus</strong></a>/<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fbboyfeiyu%2FAndroidEventBus&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>AndroidEventBus</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fgreenrobot%2FgreenDAO&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>GreenDao</strong></a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fgoogle%2Fdagger&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Dagger2</strong></a>(选用)</li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2FTencent%2Ftinker&#x26;objectId=2501461&#x26;objectType=1&#x26;contentType=undefined"><strong>Tinker</strong></a>(选用)</li>
+</ul>
+<h5 id="8-注释规范">8 注释规范</h5>
+<p>为了减少他人阅读你代码的痛苦值，请在关键地方做好注释。</p>
+<h6 id="81-类注释">8.1 类注释</h6>
+<p>每个类完成后应该有作者姓名和联系方式的注释，对自己的代码负责。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">/**</span></span>
+<span class="line"><span style="color:#6A737D"> * &#x3C;pre></span></span>
+<span class="line"><span style="color:#6A737D"> *     author : Blankj</span></span>
+<span class="line"><span style="color:#6A737D"> *     e-mail : xxx</span><span style="color:#F97583">@xx</span></span>
+<span class="line"><span style="color:#6A737D"> *     time   : 2017/03/07</span></span>
+<span class="line"><span style="color:#6A737D"> *     desc   : xxxx 描述</span></span>
+<span class="line"><span style="color:#6A737D"> *     version: 1.0</span></span>
+<span class="line"><span style="color:#6A737D"> * &#x3C;/pre></span></span>
+<span class="line"><span style="color:#6A737D"> */</span></span>
+<span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> WelcomeActivity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    ...</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>具体可以在 AS 中自己配制，进入 Settings -> Editor -> File and Code Templates -> Includes -> File Header，输入</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">/**</span></span>
+<span class="line"><span style="color:#6A737D"> * &#x3C;pre></span></span>
+<span class="line"><span style="color:#6A737D"> *     author : ${USER}</span></span>
+<span class="line"><span style="color:#6A737D"> *     e-mail : xxx</span><span style="color:#F97583">@xx</span></span>
+<span class="line"><span style="color:#6A737D"> *     time   : ${YEAR}/${MONTH}/${DAY}</span></span>
+<span class="line"><span style="color:#6A737D"> *     desc   :</span></span>
+<span class="line"><span style="color:#6A737D"> *     version: 1.0</span></span>
+<span class="line"><span style="color:#6A737D"> * &#x3C;/pre></span></span>
+<span class="line"><span style="color:#6A737D"> */</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>这样便可在每次新建类的时候自动加上该头注释。</p>
+<h6 id="82-方法注释">8.2 方法注释</h6>
+<p>每一个成员方法(包括自定义成员方法、覆盖方法、属性方法)的方法头都必须做方法头注释，在方法前一行输入 <code>/** + 回车</code> 或者设置 <code>Fix doc comment</code>(Settings -> Keymap -> Fix doc comment)快捷键，AS 便会帮你生成模板，我们只需要补全参数即可，如下所示。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">/**</span></span>
+<span class="line"><span style="color:#6A737D"> * bitmap 转 byteArr</span></span>
+<span class="line"><span style="color:#6A737D"> *</span></span>
+<span class="line"><span style="color:#6A737D"> * </span><span style="color:#F97583">@param</span><span style="color:#E1E4E8"> bitmap</span><span style="color:#6A737D"> bitmap 对象</span></span>
+<span class="line"><span style="color:#6A737D"> * </span><span style="color:#F97583">@param</span><span style="color:#E1E4E8"> format</span><span style="color:#6A737D"> 格式</span></span>
+<span class="line"><span style="color:#6A737D"> * </span><span style="color:#F97583">@return</span><span style="color:#6A737D"> 字节数组</span></span>
+<span class="line"><span style="color:#6A737D"> */</span></span>
+<span class="line"><span style="color:#E1E4E8">public static byte[] </span><span style="color:#B392F0">bitmap2Bytes</span><span style="color:#E1E4E8">(Bitmap bitmap, CompressFormat format) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (bitmap </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    ByteArrayOutputStream baos </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> ByteArrayOutputStream</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    bitmap.</span><span style="color:#B392F0">compress</span><span style="color:#E1E4E8">(format, </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">, baos);</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> baos.</span><span style="color:#B392F0">toByteArray</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<h6 id="83-块注释">8.3 块注释</h6>
+<p>块注释与其周围的代码在同一缩进级别。它们可以是 <code>/* ... */</code> 风格，也可以是 <code>// ...</code> 风格(<code>**//**</code> <strong>后最好带一个空格</strong>)。对于多行的 <code>/* ... */</code> 注释，后续行必须从 <code>*</code> 开始， 并且与前一行的 <code>*</code> 对齐。以下示例注释都是 OK 的。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">/*</span></span>
+<span class="line"><span style="color:#6A737D"> * This is</span></span>
+<span class="line"><span style="color:#6A737D"> * okay.</span></span>
+<span class="line"><span style="color:#6A737D"> */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// And so</span></span>
+<span class="line"><span style="color:#6A737D">// is this.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">/* Or you can</span></span>
+<span class="line"><span style="color:#6A737D"> * even do this. */</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<p>注释不要封闭在由星号或其它字符绘制的框架里。</p>
+<blockquote>
+<p>Tip：在写多行注释时，如果你希望在必要时能重新换行(即注释像段落风格一样)，那么使用 <code>/* ... */</code>。</p>
+</blockquote>
+<h6 id="84-其他一些注释">8.4 其他一些注释</h6>
+<p>AS 已帮你集成了一些注释模板，我们只需要直接使用即可，在代码中输入 <code>todo</code>、<code>fixme</code> 等这些注释模板，回车后便会出现如下注释。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// TODO: 17/3/14 需要实现，但目前还未实现的功能的说明</span></span>
+<span class="line"><span style="color:#6A737D">// FIXME: 17/3/14 需要修正，甚至代码是错误的，不能工作，需要修复的说明</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码;</span></span></code></pre>
+<h5 id="9-测试规范">9 测试规范</h5>
+<p>业务开发完成之后，开发人员做单元测试，单元测试完成之后，保证单元测试全部通过，同时单元测试代码覆盖率达到一定程度(这个需要开发和测试约定，理论上越高越好)，开发提测。</p>
+<h6 id="91-单元测试">9.1 单元测试</h6>
+<p>测试类的名称应该是所测试类的名称加 <code>Test</code>，我们创建 <code>DatabaseHelper</code> 的测试类，其名应该叫 <code>DatabaseHelperTest</code>。</p>
+<p>测试函数被 <code>@Test</code> 所注解，函数名通常以被测试的方法为前缀，然后跟随是前提条件和预期的结果。</p>
+<ul>
+<li>模板：<code>void methodName 前提条件和预期结果()</code></li>
+<li>例子：<code>void signInWithEmptyEmailFails()</code></li>
+</ul>
+<blockquote>
+<p>注意：如果函数足够清晰，那么前提条件和预期的结果是可以省略的。</p>
+</blockquote>
+<p>有时一个类可能包含大量的方法，同时需要对每个方法进行几次测试。在这种情况下，建议将测试类分成多个类。例如，如果 <code>DataManager</code> 包含很多方法，我们可能要把它分成 <code>DataManagerSignInTest</code>、<code>DataManagerLoadUsersTest</code> 等等。</p>
+<h6 id="92-espresso-测试">9.2 Espresso 测试</h6>
+<p>每个 Espresso 测试通常是针对 <code>Activity</code>，所以其测试名就是其被测的 <code>Activity</code> 的名称加 <code>Test</code>，比如 <code>SignInActivityTest</code>。</p>
+<h5 id="10-其他的一些规范">10 其他的一些规范</h5>
+<p>合理布局，有效运用 <code>&#x3C;merge></code>、<code>&#x3C;ViewStub></code>、<code>&#x3C;include></code> 标签；</p>
+<p><code>Activity</code> 和 <code>Fragment</code> 里面有许多重复的操作以及操作步骤，所以我们都需要提供一个 <code>BaseActivity</code> 和 <code>BaseFragment</code>，让所有的 <code>Activity</code> 和 <code>Fragment</code> 都继承这个基类。</p>
+<p>方法基本上都按照调用的先后顺序在各自区块中排列；</p>
+<p>相关功能作为小区块放在一起(或者封装掉)；</p>
+<p>当一个类有多个构造函数，或是多个同名函数，这些函数应该按顺序出现在一起，中间不要放进其它函数；</p>
+<p>数据提供统一的入口。无论是在 MVP、MVC 还是 MVVM 中，提供一个统一的数据入口，都可以让代码变得更加易于维护。比如可使用一个 <code>DataManager</code>，把 <code>http</code>、<code>preference</code>、<code>eventpost</code>、<code>database</code> 都放在 <code>DataManager</code> 里面进行操作，我们只需要与 <code>DataManager</code> 打交道；</p>
+<p>多用组合，少用继承；</p>
+<p>提取方法，去除重复代码。对于必要的工具类抽取也很重要，这在以后的项目中是可以重用的。</p>
+<p>可引入 <code>Dagger2</code> 减少模块之间的耦合性。<code>Dagger2</code> 是一个依赖注入框架，使用代码自动生成创建依赖关系需要的代码。减少很多模板化的代码，更易于测试，降低耦合，创建可复用可互换的模块；</p>
+<p>项目引入 <code>RxAndroid</code> 响应式编程，可以极大的减少逻辑代码；</p>
+<p>通过引入<a href="https://cloud.tencent.com/product/eb?from_column=20065&#x26;from=20065">事件总线</a>，如：<code>EventBus</code>、<code>AndroidEventBus</code>、<code>RxBus</code>，它允许我们在 <code>DataLayer</code> 中发送事件，以便 <code>ViewLayer</code> 中的多个组件都能够订阅到这些事件，减少回调；</p>
+<p>尽可能使用局部变量；</p>
+<p>及时关闭流；</p>
+<p>尽量减少对变量的重复计算；</p>
+<p>如下面的操作：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> (int i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> list.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">(); i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">      ...</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">建议替换为：</span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> (int i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">, len </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> list.</span><span style="color:#B392F0">size</span><span style="color:#E1E4E8">(); i </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> len; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">      ...</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>尽量采用懒加载的策略，即在需要的时候才创建；</p>
+<p>例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">String str </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "aaa"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (i </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      list.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(str);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">建议替换为：</span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">if</span><span style="color:#E1E4E8"> (i </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      String str </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "aaa"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">      list.</span><span style="color:#B392F0">add</span><span style="color:#E1E4E8">(str);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">复制代码</span></span></code></pre>
+<ol>
+<li>不要在循环中使用 <code>try…catch…</code>，应该把其放在最外层；</li>
+<li>使用带缓冲的输入输出流进行 IO 操作；</li>
+<li>尽量使用 <code>HashMap</code>、<code>ArrayList</code>、<code>StringBuilder</code>，除非线程安全需要，否则不推荐使用 <code>HashTable</code>、<code>Vector</code>、<code>StringBuffer</code>，后三者由于使用同步机制而导致了性能开销；</li>
+<li>尽量在合适的场合使用单例； 使用单例可以减轻加载的负担、缩短加载的时间、提高加载的效率，但并不是所有地方都适用于单例，简单来说，单例主要适用于以下三个方面：
+<ol>
+<li>控制资源的使用，通过线程同步来控制资源的并发访问。</li>
+<li>控制实例的产生，以达到节约资源的目的。</li>
+<li>控制数据的共享，在不建立直接关联的条件下，让多个不相关的进程或线程之间实现通信。</li>
+</ol>
+</li>
+<li>把一个基本数据类型转为字符串，<code>基本数据类型.toString()</code> 是最快的方式，<code>String.valueOf(数据)</code> 次之，<code>数据 + ""</code> 最慢；</li>
+<li>使用 AS 自带的 Lint 来优化代码结构(什么，你不会？右键 module、目录或者文件，选择 Analyze -> Inspect Code)；</li>
+<li>最后不要忘了内存泄漏的检测；</li>
+</ol>
+<hr>
+<p>最后啰嗦几句：</p>
+<ul>
+<li>好的命名规则能够提高代码质量，使得新人加入项目的时候降低理解代码的难度；</li>
+<li>规矩终究是死的，适合团队的才是最好的；</li>
+<li>命名规范需要团队一起齐心协力来维护执行，在团队生活里，谁都不可能独善其身；</li>
+<li>一开始可能会有些不习惯，持之以恒，总会成功的。</li>
+</ul>
+<h4 id="附录">附录</h4>
+<h5 id="ui-控件缩写表">UI 控件缩写表</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>缩写</th></tr></thead><tbody><tr><td>Button</td><td>btn</td></tr><tr><td>CheckBox</td><td>cb</td></tr><tr><td>EditText</td><td>et</td></tr><tr><td>FrameLayout</td><td>fl</td></tr><tr><td>GridView</td><td>gv</td></tr><tr><td>ImageButton</td><td>ib</td></tr><tr><td>ImageView</td><td>iv</td></tr><tr><td>LinearLayout</td><td>ll</td></tr><tr><td>ListView</td><td>lv</td></tr><tr><td>ProgressBar</td><td>pb</td></tr><tr><td>RadioButtion</td><td>rb</td></tr><tr><td>RecyclerView</td><td>rv</td></tr><tr><td>RelativeLayout</td><td>rl</td></tr><tr><td>ScrollView</td><td>sv</td></tr><tr><td>SeekBar</td><td>sb</td></tr><tr><td>Spinner</td><td>spn</td></tr><tr><td>TextView</td><td>tv</td></tr><tr><td>ToggleButton</td><td>tb</td></tr><tr><td>VideoView</td><td>vv</td></tr><tr><td>WebView</td><td>wv</td></tr></tbody></table>
+<h5 id="常见的英文单词缩写表">常见的英文单词缩写表</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>缩写</th></tr></thead><tbody><tr><td>average</td><td>avg</td></tr><tr><td>background</td><td>bg(主要用于布局和子布局的背景)</td></tr><tr><td>buffer</td><td>buf</td></tr><tr><td>control</td><td>ctrl</td></tr><tr><td>current</td><td>cur</td></tr><tr><td>default</td><td>def</td></tr><tr><td>delete</td><td>del</td></tr><tr><td>document</td><td>doc</td></tr><tr><td>error</td><td>err</td></tr><tr><td>escape</td><td>esc</td></tr><tr><td>icon</td><td>ic(主要用在 App 的图标)</td></tr><tr><td>increment</td><td>inc</td></tr><tr><td>information</td><td>info</td></tr><tr><td>initial</td><td>init</td></tr><tr><td>image</td><td>img</td></tr><tr><td>Internationalization</td><td>I18N</td></tr><tr><td>length</td><td>len</td></tr><tr><td>library</td><td>lib</td></tr><tr><td>message</td><td>msg</td></tr><tr><td>password</td><td>pwd</td></tr><tr><td>position</td><td>pos</td></tr><tr><td>previous</td><td>pre</td></tr><tr><td>selector</td><td>sel(主要用于某一 view 多种状态，不仅包括 ListView 中的 selector，还包括按钮的 selector)</td></tr><tr><td>server</td><td>srv</td></tr><tr><td>string</td><td>str</td></tr><tr><td>temporary</td><td>tmp</td></tr><tr><td>window</td><td>win</td></tr></tbody></table>
+<p>程序中使用单词缩写原则：不要用缩写，除非该缩写是约定俗成的。</p>
+<p>转载自：<a href="https://cloud.tencent.com/developer/article/2501461">https://cloud.tencent.com/developer/article/2501461</a></p>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+&copy; 2026 Your name here. All rights reserved.
+<div class="social-links" data-astro-cid-sz7xmlte> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/mastodon" data-astro-cid-sz7xmlte><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter" data-astro-cid-sz7xmlte><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github" data-astro-cid-sz7xmlte><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-sz7xmlte></path></svg> </a> </div> </footer>  </body></html>

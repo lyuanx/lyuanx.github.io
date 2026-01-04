@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Astro Blog" href="https://example.com/rss.xml"><meta name="generator" content="Astro v5.16.6"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://example.com/blog/android---%E7%AE%80%E5%8D%95%E7%BB%84%E4%BB%B6---textview/"><!-- Primary Meta Tags --><title>Android 简单组件</title><meta name="title" content="Android 简单组件"><meta name="description" content="Android 简单组件...."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/blog/android---%E7%AE%80%E5%8D%95%E7%BB%84%E4%BB%B6---textview/"><meta property="og:title" content="Android 简单组件"><meta property="og:description" content="Android 简单组件...."><meta property="og:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://example.com/blog/android---%E7%AE%80%E5%8D%95%E7%BB%84%E4%BB%B6---textview/"><meta property="twitter:title" content="Android 简单组件"><meta property="twitter:description" content="Android 简单组件...."><meta property="twitter:image" content="https://example.com/_astro/blog-placeholder-1.Bx0Zcyzv.jpg"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media(max-width:720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:space-between}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media(max-width:720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Astro Blog</a></h2> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Home </a>  <a href="/blog" class="active" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <div class="social-links" data-astro-cid-3ef6ksr2> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-3ef6ksr2></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img src="/_astro/blog-placeholder-4.gLBdjEDe_IpMdA.webp" alt data-astro-cid-bvzihdzo="true" loading="lazy" decoding="async" fetchpriority="auto" width="1020" height="510"> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2026-01-02T00:00:00.000Z"> Jan 2, 2026 </time>  </div> <h1 data-astro-cid-bvzihdzo>Android 简单组件</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>设置组件有两种方式：</p>
+<ol>
+<li>通过 XML 形式</li>
+<li>通过代码形式</li>
+</ol>
+<p>这里我们使用代码形式</p>
+<p>文本控件</p>
+<h3 id="显示富文本url不同大小字体颜色的文本">显示富文本（URL、不同大小、字体、颜色的文本）</h3>
+<p>在 TextView 中预定义了一些类似 HTML 标签（不区分大小写），通过这些标签，我们可以使 TextView 控件显示不同的颜色、大小、字体的文字。 常见的标签如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>描述</th></tr></thead><tbody><tr><td></td><td>设置颜色和字体 ，只支持 color 和 face 两个属性</td></tr><tr><td></td><td>大号字体</td></tr><tr><td></td><td>小号字体</td></tr><tr><td></td><td>斜体</td></tr><tr><td></td><td>粗体</td></tr><tr><td></td><td>等宽字体（Monospace）</td></tr><tr><td></td><td>换行(行与行之间没有空行)，相当于\n</td></tr><tr><td></td><td>换行（行与行之间有空行），相当于\n\n. 对于带有标签的文本，直接使\n 无法换行，只能使用 或者</td></tr><tr><td></td><td>超链接</td></tr><tr><td></td><td>插入图像,只有一个 src 属性</td></tr></tbody></table>
+<hr>
+<p>虽然和 HTML 标签类似，但是并不具备 HTML 标签的全部功能。</p>
+<p><strong>不能将带有标签的字符串直接使用 TextView.setText()的方法进行设置，需要使用 Html.fromHtml()将带有标签的字符串转换成 CharSequence 对象，然后再使用 TextView.setText()方法进行设置。</strong></p>
+<p>如果想要在显示的文本中将 URL、Email、电话号码等特殊内容高亮显示，并在单击的时候触发相关的动作（URL 会调用浏览器显示网址，电话号码会在拨号界面显示电话号），可以通过设置标签的<strong>android**</strong>.autoLink**属性来实现</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>描述</th></tr></thead><tbody><tr><td>none</td><td>不匹配任何链接（默认值）</td></tr><tr><td>web</td><td>匹配 Web 网址</td></tr><tr><td>email</td><td>匹配 Email</td></tr><tr><td>phone</td><td>匹配电话号码</td></tr><tr><td>map</td><td>匹配映射地址</td></tr><tr><td>all</td><td>匹配所有的连接</td></tr></tbody></table>
+<hr>
+<p>Demo: <strong>android:autoLink=”all”</strong></p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_richText1"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_richText2"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">autoLink</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"all"</span><span style="color:#E1E4E8">/></span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> RichTextViewAct</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Bundle</span><span style="color:#FFAB70"> savedInstanceState</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onCreate</span><span style="color:#E1E4E8">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#B392F0">        setContentView</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.layout.activity_rich_text_view);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">        init</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> init</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        TextView textView1 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView) </span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_richText1);</span></span>
+<span class="line"><span style="color:#E1E4E8">        TextView textView2 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView) </span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_richText2);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        String html </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "I Love Android"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        html </span><span style="color:#F97583">+=</span><span style="color:#9ECBFF"> "I Love Android"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        html </span><span style="color:#F97583">+=</span><span style="color:#9ECBFF"> "I Love Androi</span><span style="color:#FDAEB7;font-style:italic">d</span></span></code></pre>
+<p>![img](/Users/linyuan/workspace/unan/astro-blog/src/content/blog/Android - 简单组件 - TextView.assets/mceclip0_20260101_102324-1767345736908-25.png)</p>
+<p><strong>注意</strong> <strong>在调用 setText 方法设置文本完成后，还需要调用 setMovementMethod 方法设置一个 MovementMethod 对象。 由于本例中标签是链接，因此，需要使用 LinkMovementMethod.getInstance()方法获得 MovementMethod 对象，该对象可以使单击浏览器时显示指定的网页，如果不设置 MovementMethod 对象，虽然可以正常显示 a 标签指定的链接，但是单击链接任何反应。</strong></p>
+<p>----</p>
+<h3 id="在-textview-中显示-表情图像和文字">在 TextView 中显示 表情图像和文字</h3>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">img</span><span style="color:#E1E4E8">>标签可以实现。</span></span></code></pre>
+<p>img 标签只有一个 src 属性，该属性原则上应该指向一个图像地址或可以找到某个图像资源的唯一标识，但是系统并不会直接根据 src 属性所指的值自动获取和显示图像，需要开发人员解析。 解析 src 属性值的工作需要在 ImageGetter 对象的 getDrawable 方法中完成。</p>
+<p>ImageGetter 是个接口。使用过 Html.fromHtml 方法的如下重载形式会比较熟悉它。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public static Spanned </span><span style="color:#B392F0">fromHtml</span><span style="color:#E1E4E8">(String source,ImageGetter imageGetter ,TagHandler tagHandler);</span></span></code></pre>
+<p>fromHtml 方法有如下三个参数：</p>
+<ul>
+<li>source:包含 Html 标签的字符串</li>
+<li>imageGetter:ImageGetter 对象。当系统解析到 img 标签时就是调用 ImageGetter 对象的 getDrawable 方法，并将 src 属性传入 getDrawable 方法中。至于 src 属性值的具体含义，就要在 getDrawable 方法中确定了。 getDrawable 方法返回的是一个 Drawable 对象。我们可以从 res/drawable 资源、SD 卡或者网络获得资源，并封装成 Drawable 对象。</li>
+<li>tagHandler:TagHandler 对象，这个参数使用的并不多。当系统处理每一个标签的时候都会调用该对象的 handleTag 方法，如果不是用该参数，可以设置为 null.</li>
+</ul>
+<p>Demo： 5 张图片，存放在 res/drawable 文件夹下，在一个 TextView 中以不同的大小显示这 5 张图片，并在其中插入相应的文字。</p>
+<p>由于无法直接使用文件名来引用 res/drawable 中的图像资源，我们使用反射技术从 R.drawable 类中通过图像资源名称获取对应的图像资源 ID，实现的原理就是 R.drawable 类中的相应的资源 ID 变量名就是图像文件的文件名。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> MultTextPicAct</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#E1E4E8"> TextView </span><span style="color:#FFAB70">tv_textAndPic</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Bundle</span><span style="color:#FFAB70"> savedInstanceState</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onCreate</span><span style="color:#E1E4E8">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#B392F0">        requestWindowFeature</span><span style="color:#E1E4E8">(Window.</span><span style="color:#79B8FF">FEATURE_NO_TITLE</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">        setContentView</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.layout.activity_mult_text_pic);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">        initView</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    /**</span></span>
+<span class="line"><span style="color:#6A737D">     * 初始化视图</span></span>
+<span class="line"><span style="color:#6A737D">     */</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> initView</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#6A737D">        // 组件初始化</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_textAndPic </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView) </span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_textAndPic);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_textAndPic.</span><span style="color:#B392F0">setTextSize</span><span style="color:#E1E4E8">(20f);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_textAndPic.</span><span style="color:#B392F0">setBackgroundColor</span><span style="color:#E1E4E8">(Color.</span><span style="color:#79B8FF">WHITE</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">        // 定义图文混编</span></span>
+<span class="line"><span style="color:#E1E4E8">        String html </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "图片1图片</span><span style="color:#FDAEB7;font-style:italic">2</span></span></code></pre>
+<p>注意：在 getDrawable 方法中获取到图像资源的 drawable 对象后，必须使用 Drawable.setBounds 方法设置图像的显示区域，否则显示区域的面积为 0，也就不会在 TextView 中显示图像了。其中第三个图像等比缩小了 50%，显示效果如下</p>
+<p>![img](/Users/linyuan/workspace/unan/astro-blog/src/content/blog/Android - 简单组件 - TextView.assets/mceclip1_20260101_102345-1767345753038-28.png)</p>
+<hr>
+<h3 id="单击链接弹出-activity">单击链接弹出 Activity</h3>
+<p>我们知道通过标签以及 TextView 自动识别的特殊文本（网址 电话 Email 等），这些都可以通过单击操作来触发不同的动作。虽然这些单击动作已经可以满足大部分的需求了，但是如果要想在单击链接的时候执行任意的自定义的动作，就需要学习下面的内容了。</p>
+<p>在 Android 中，Span 表示一段文本的效果，例如链接形式，图像，带颜色的文本等。 所有的 Span 类都在 android.text.style 包中。</p>
+<p>Demo：</p>
+<p>准备一个 TextView，点击跳转到 Activity。</p>
+<p>我们使用 SpannableString 对象来设置 Span。</p>
+<p><strong>SpannableString 和 SpannableBuilder 的区别：SpannableString 不允许修改文本，只允许设置 Span，而 SpannableBulilder 既允许修改文本，也允许设置 Span。</strong></p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> Jump2Activity</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#E1E4E8"> TextView </span><span style="color:#FFAB70">tv_jump</span><span style="color:#E1E4E8"> ;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Bundle</span><span style="color:#FFAB70"> savedInstanceState</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onCreate</span><span style="color:#E1E4E8">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#B392F0">        requestWindowFeature</span><span style="color:#E1E4E8">(Window.</span><span style="color:#79B8FF">FEATURE_NO_TITLE</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">        setContentView</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.layout.activity_jump2);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">        initData</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    /**</span></span>
+<span class="line"><span style="color:#6A737D">     * 点击TextView弹出Activity</span></span>
+<span class="line"><span style="color:#6A737D">     */</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> initData</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        tv_jump </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView)</span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_jump2Act);</span></span>
+<span class="line"><span style="color:#E1E4E8">        String text </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "显示Activity"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 将文本转换成SpannableString对象</span></span>
+<span class="line"><span style="color:#E1E4E8">        SpannableString spannableString </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> SpannableString</span><span style="color:#E1E4E8">(text);</span></span>
+<span class="line"><span style="color:#6A737D">        // 将text中的所有文本设置成ClickableSpan对象，并实现onClick方法</span></span>
+<span class="line"><span style="color:#E1E4E8">        spannableString.</span><span style="color:#B392F0">setSpan</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">new</span><span style="color:#B392F0"> ClickableSpan</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#6A737D">            // 在onClick方法中可以编写单击链接时要执行的动作</span></span>
+<span class="line"><span style="color:#E1E4E8">            @Override</span></span>
+<span class="line"><span style="color:#E1E4E8">            public void </span><span style="color:#B392F0">onClick</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">View</span><span style="color:#FFAB70"> widget</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">                startActivity</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">new</span><span style="color:#B392F0"> Intent</span><span style="color:#E1E4E8">(Jump2Activity.this,JumpTerminalAct.class));</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#E1E4E8">        },</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,text.</span><span style="color:#B392F0">length</span><span style="color:#E1E4E8">() , Spanned.</span><span style="color:#79B8FF">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 设置控件显示内容</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_jump.</span><span style="color:#B392F0">setText</span><span style="color:#E1E4E8">(spannableString);</span></span>
+<span class="line"><span style="color:#6A737D">        // 在点击链接时凡是要有执行的动作，都必须要设置MovementMethod对象</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_jump.</span><span style="color:#B392F0">setMovementMethod</span><span style="color:#E1E4E8">(LinkMovementMethod.</span><span style="color:#B392F0">getInstance</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>方法说明<strong>setSpan</strong> 4 个参数</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8"> public </span><span style="color:#F97583">void</span><span style="color:#B392F0"> setSpan</span><span style="color:#E1E4E8">(Object what, int start, int end, int flags) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">setSpan</span><span style="color:#E1E4E8">(what, start, end, flags);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span></code></pre>
+<p>第一个参数需要设置一个 ClickableSpan 对象 第二个和第三个参数表示要设置成 Span 的某段文本的起始位置和终止位置。 第四个参数是一个标志，在本例中设置成了 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE,该标志在 TextView 中的意义不大，单在 EditText 控件中表示的含义：在当前 Span 效果的前后输入字符串时并不应用 Span 的效果。</p>
+<p>还有其他的几个值：</p>
+<p>Spanned.SPAN_EXCLUSIVE_INCLUSIVE :在 Span 前面输入的字符不应用 Span 的效果，后面输入的字符应用 Span 的效果</p>
+<p>Spanned.SPAN_INCLUSIVE_INCLUSIVE：在 Span 前面输入的字符应用 Span 的效果，后面输入的字符不应用 Span 的效果</p>
+<p>Spanned.SPAN_INCLUSIVE_EXCLUSIVE：在 Span 前后输入的字符都应用 Span 的效果。</p>
+<p>----</p>
+<h3 id="为指定文字添加背景">为指定文字添加背景</h3>
+<p>从上面的例子中我们可以总结出 <strong>设置字符串中的某个子字符串的样式</strong>（变成可单击的链接、设置字体等）步骤如下：</p>
+<ol>
+<li>将字符串转换成 SpannableString 或者 SpannableBuilder 对象</li>
+<li>获得要设置样式的子字符串在原字符串中的位置和子字符串后面的字符的位置，即 start 和 end</li>
+<li>创建一个 Span 对象（所有 android.text.style 包中的 XXXSpan 类创建的对象的统称，XXX 标识 URL、BackGround 等类的前缀）</li>
+<li>使用 setSpan 方法设置一个 span 对象，即将要设置样子的子字符串转换为 Span 对象</li>
+<li>用处理完的 SpannableString 或者 SpannableBuilder 对象设置相应的控件（例如 TextView、EditText、Button 等）</li>
+</ol>
+<p>在 SDK 的 android.text.style 有很多现成的 Span 对象，例如 BackgroundColorSpan，该类的功能是设置指定字符串的背景色。 例如：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">TextView textView </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView)</span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.textView);</span></span>
+<span class="line"><span style="color:#E1E4E8">String text </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "&#x3C;没有背景>&#x3C;黄色背景>"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">// 第一步：将字符串转换成为SpannableString对象</span></span>
+<span class="line"><span style="color:#E1E4E8">SpannableString s </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> SpannableString</span><span style="color:#E1E4E8">(text);</span></span>
+<span class="line"><span style="color:#6A737D">// 第二步：确定要设置的子字符串的star和end</span></span>
+<span class="line"><span style="color:#E1E4E8">int start </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 6</span><span style="color:#E1E4E8"> ;</span></span>
+<span class="line"><span style="color:#E1E4E8">int end </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 12</span><span style="color:#E1E4E8"> ;</span></span>
+<span class="line"><span style="color:#6A737D">// 第三步： 创建BackgroundColorSpan对象</span></span>
+<span class="line"><span style="color:#E1E4E8">BackgroundColorSpan b </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> BackgroundColor</span><span style="color:#E1E4E8">(Color.</span><span style="color:#79B8FF">YELLOW</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">// 第四步：使用setSpan将指定的子字符串转换成BackgroundColorSpan对象</span></span>
+<span class="line"><span style="color:#E1E4E8">s.</span><span style="color:#B392F0">setSpan</span><span style="color:#E1E4E8">(b,start,end,Spannable.</span><span style="color:#79B8FF">SPAN_EXCLUSIVE_EXCLUSIVE</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">// 第五步：用SpannableString对象设置TextView控件</span></span>
+<span class="line"><span style="color:#E1E4E8">textView.</span><span style="color:#B392F0">setText</span><span style="color:#E1E4E8">(s);</span></span></code></pre>
+<p>BackgroundColorSpan 只能够设置文字的背景色，为了更加的通用，自定义一个 ColorSpan 类，使其能够同时设置文字颜色和背景色（android.text.style.ForegroundColorSpan 可以设置文字颜色，但并没有可以同事设置背景和文字颜色的 Span 类）。</p>
+<p>如果需要处理链接动作，必须要继承 ClickableSpan 类，本例我们只是设置文字和背景颜色，并不需要处理任何动作，因此只需要从 CharacterStyle 类继承即可。事实上，ClickableSpan 也是 CharacterStyle 的子类。</p>
+<p>代码如下：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> android.app.Activity;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.graphics.Color;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.os.Bundle;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.text.SpannableString;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.text.Spanned;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.text.TextPaint;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.text.style.BackgroundColorSpan;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.text.style.CharacterStyle;</span></span>
+<span class="line"><span style="color:#E1E4E8">import android.widget.TextView;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">import com.turing.base.R;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">public class AddBackgroundAct extends Activity {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    private TextView tv_addbBackground;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#E1E4E8">    protected void onCreate(Bundle savedInstanceState) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        super.onCreate(savedInstanceState);</span></span>
+<span class="line"><span style="color:#E1E4E8">        setContentView(R.layout.activity_add_background);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        initView();</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    private void initView() {</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_addbBackground = (TextView) findViewById(R.id.id_tv_addBackground);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        String text = </span><span style="color:#9ECBFF">"&#x3C;没有背景>&#x3C;黄色背景>\n\n&#x3C;蓝色背景,红色文字>"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        SpannableString spannableString = new SpannableString(text);</span></span>
+<span class="line"><span style="color:#E1E4E8">        int start = 6;</span></span>
+<span class="line"><span style="color:#E1E4E8">        int end = 12;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        BackgroundColorSpan backgroundColorSpan = new BackgroundColorSpan(Color.YELLOW);</span></span>
+<span class="line"><span style="color:#E1E4E8">        spannableString.setSpan(backgroundColorSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // &#x3C;蓝色背景,红色文字> (每个 “\n”算一个长度)</span></span>
+<span class="line"><span style="color:#E1E4E8">        start = 14;</span></span>
+<span class="line"><span style="color:#E1E4E8">        end = text.length();</span></span>
+<span class="line"><span style="color:#6A737D">        // 创建ColorSpan</span></span>
+<span class="line"><span style="color:#E1E4E8">        ColorSpan colorSpan = new ColorSpan(Color.RED, Color.BLUE);</span></span>
+<span class="line"><span style="color:#6A737D">        // 将文字转换为ColorSpan对象</span></span>
+<span class="line"><span style="color:#E1E4E8">        spannableString.setSpan(colorSpan, start,end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv_addbBackground.setText(spannableString);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        TextView tv = (TextView)findViewById(R.id.id_tv_tv2);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv.setText(</span><span style="color:#9ECBFF">"一整个字符串的普通的背景设置,文字颜色设置"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv.setBackgroundColor(Color.GREEN);</span></span>
+<span class="line"><span style="color:#E1E4E8">        tv.setTextColor(Color.DKGRAY);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    /**</span></span>
+<span class="line"><span style="color:#6A737D">     * 自定义Span类,可以同时设置文字颜色和背景色</span></span>
+<span class="line"><span style="color:#6A737D">     */</span></span>
+<span class="line"><span style="color:#E1E4E8">    class ColorSpan extends CharacterStyle {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        private int mTextColor;</span></span>
+<span class="line"><span style="color:#E1E4E8">        private int mBackgroundColor;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        public ColorSpan(int mTextColor, int mBackgroundColor) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            this.mTextColor = mTextColor;</span></span>
+<span class="line"><span style="color:#E1E4E8">            this.mBackgroundColor = mBackgroundColor;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#6A737D">        // 重写updateDrawState方法</span></span>
+<span class="line"><span style="color:#E1E4E8">        @Override</span></span>
+<span class="line"><span style="color:#E1E4E8">        public void updateDrawState(TextPaint tp) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            tp.bgColor = mBackgroundColor;</span></span>
+<span class="line"><span style="color:#E1E4E8">            tp.setColor(mTextColor);</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>![img](/Users/linyuan/workspace/unan/astro-blog/src/content/blog/Android - 简单组件 - TextView.assets/mceclip2_20260101_102407-1767345769687-31.png)</p>
+<hr>
+<p>总结：</p>
+<ol>
+<li>将 android:autoLink 的属性值设置为 true,系统会自动识别 E-mail、电话、网址等特殊文本</li>
+<li>使用 Html 标签，例如</li>
+</ol>
+<p>等，不要设置 android:autoLink 属性</p>
+<ol>
+<li>在 java 代码中直接使用 Span 对象来设置文本样式。这种方法需要将文本转换成为一个 SpannableString 或者 SpannableBuilder 对象，然后在 SpannableString 或者 SpannableBuilder 对象中使用 setSpan 方法将需要设置样式的文本转换成相应的 Span 对象</li>
+<li>在字符串资源中，使用标签（仅支持 a 标签）设置可点击的链接，不要设置 android:autoLink 属性。例如</li>
+</ol>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#85E89D">string</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"link_text"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> href</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"tel:123456"</span><span style="color:#E1E4E8">>打电话a></span></span>
+<span class="line"><span style="color:#E1E4E8">string></span></span></code></pre>
+<p>然后在 TextView 标签中引用</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F97583">...</span><span style="color:#E1E4E8">..</span></span>
+<span class="line"><span style="color:#B392F0">android</span><span style="color:#E1E4E8">:text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@string/link_text"</span></span></code></pre>
+<p>----</p>
+<h3 id="带边框的-textview">带边框的 TextView</h3>
+<p>两种方式：</p>
+<ol>
+<li>编写一个继承 TextView 类的自定义控件，重写 onDraw()绘制边框</li>
+<li>使用 9-patch（*.9.png）格式的图像作为 TextView 的背景图来设置边框（这个背景图需要有一个边框）</li>
+</ol>
+<p>通过第一中方式实现：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> BorderTextView</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> TextView</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#B392F0"> BorderTextView</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Context</span><span style="color:#FFAB70"> context</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">AttributeSet</span><span style="color:#FFAB70"> attrs</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">(context, attrs);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onDraw</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Canvas</span><span style="color:#FFAB70"> canvas</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onDraw</span><span style="color:#E1E4E8">(canvas);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        Paint paint </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Paint</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#6A737D">        // 设置所绘制的边框颜色为黑色</span></span>
+<span class="line"><span style="color:#E1E4E8">        paint.</span><span style="color:#B392F0">setColor</span><span style="color:#E1E4E8">(Color.</span><span style="color:#79B8FF">BLACK</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">        // 绘制上边框</span></span>
+<span class="line"><span style="color:#E1E4E8">        canvas.</span><span style="color:#B392F0">drawLine</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getWidth</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, paint);</span></span>
+<span class="line"><span style="color:#6A737D">        // 绘制左边框</span></span>
+<span class="line"><span style="color:#E1E4E8">        canvas.</span><span style="color:#B392F0">drawLine</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getHeight</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, paint);</span></span>
+<span class="line"><span style="color:#6A737D">        // 绘制右边框</span></span>
+<span class="line"><span style="color:#E1E4E8">        canvas.</span><span style="color:#B392F0">drawLine</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getWidth</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getWidth</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getHeight</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, paint);</span></span>
+<span class="line"><span style="color:#6A737D">        // 绘制下边框</span></span>
+<span class="line"><span style="color:#E1E4E8">        canvas.</span><span style="color:#B392F0">drawLine</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getHeight</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getWidth</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">getHeight</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, paint);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>XML:</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">RelativeLayout</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">android</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">com.turing.base.activity.textViewAct.BorderTextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_borderTV"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">gravity</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"center"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"自定义TextView绘制边框"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">RelativeLayout></span></span></code></pre>
+<p>![img](/Users/linyuan/workspace/unan/astro-blog/src/content/blog/Android - 简单组件 - TextView.assets/mceclip3_20260101_102422-1767345782740-34.png)</p>
+<hr>
+<h3 id="设置行间距">设置行间距</h3>
+<p>如果 TextView 控件中显示了多行文本，会有一个默认的行间距。 如果要改默认的行间距，三种方法：</p>
+<ol>
+<li>布局文件中使用 android:lineSpacingExtra 或者 android:lineSpacingMultiplier 属性设置行间距。</li>
+</ol>
+<p>android:lineSpacingExtra 设置精确的行间距，例如 <code>android:lineSpacingExtra="20dp"</code></p>
+<p>android:lineSpacingMultiplier 属性设置的是默认行间距的倍数。</p>
+<p>如果同时设置了这两个属性，以较大行间距为准。</p>
+<ol>
+<li>使用 Style 资源设置行间距</li>
+<li>使用 setLineSpacing 方法设置行间距。</li>
+</ol>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">LinearLayout</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">android</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">orientation</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"vertical"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_lineSpace"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">lineSpacingExtra</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"20dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">textColor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"第一行的文本\n第二行的文本（20dp）"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_lineSpace2"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">lineSpacingMultiplier</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"1.8"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">textColor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"第一行的文本\n第二行的文本(行间距是默认行间距的1.8倍)"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_lineSpace3"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        style</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@style/line_space"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">textColor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"第一行的文本\n第二行的文本(style设置的，行间距是默认行间距的1.5倍)"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_lineSpace4"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">textColor</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"第一行的文本\n第二行的文本(代码设置)"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">LinearLayout></span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8"> &#x3C;</span><span style="color:#85E89D">style</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"line_space"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"><span style="color:#E1E4E8">        &#x3C;</span><span style="color:#85E89D">item</span><span style="color:#B392F0"> name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"android:lineSpacingMultiplier"</span><span style="color:#E1E4E8">>1.5item></span></span>
+<span class="line"><span style="color:#E1E4E8">    style></span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> LineSpaceTextViewAct</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> AppCompatActivity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Bundle</span><span style="color:#FFAB70"> savedInstanceState</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onCreate</span><span style="color:#E1E4E8">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#B392F0">        setContentView</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.layout.activity_line_space_text_view);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        TextView tv </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView)</span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_lineSpace4);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        tv.</span><span style="color:#B392F0">setLineSpacing</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">,1.2f);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>setSpacing 方法：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">     * Sets line spacing for this TextView.  Each line will have its height</span></span>
+<span class="line"><span style="color:#6A737D">     * multiplied by mult and have add added to it.</span></span>
+<span class="line"><span style="color:#6A737D">     *</span></span>
+<span class="line"><span style="color:#6A737D">     * </span><span style="color:#F97583">@attr</span><span style="color:#6A737D"> ref android.R.styleable#TextView_lineSpacingExtra</span></span>
+<span class="line"><span style="color:#6A737D">     * </span><span style="color:#F97583">@attr</span><span style="color:#6A737D"> ref android.R.styleable#TextView_lineSpacingMultiplier</span></span>
+<span class="line"><span style="color:#6A737D">     */</span></span>
+<span class="line"><span style="color:#E1E4E8">    public </span><span style="color:#F97583">void</span><span style="color:#B392F0"> setLineSpacing</span><span style="color:#E1E4E8">(float add, float mult) {</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> (mSpacingAdd </span><span style="color:#F97583">!=</span><span style="color:#E1E4E8"> add </span><span style="color:#F97583">||</span><span style="color:#E1E4E8"> mSpacingMult </span><span style="color:#F97583">!=</span><span style="color:#E1E4E8"> mult) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            mSpacingAdd </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> add;</span></span>
+<span class="line"><span style="color:#E1E4E8">            mSpacingMult </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> mult;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> (mLayout </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> null</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#B392F0">                nullLayouts</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#B392F0">                requestLayout</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#B392F0">                invalidate</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span></code></pre>
+<p>第一个参数相当于 android:lineSpacingExtra 属性，第二个参数相当于 android:lineSpaceingMultiplier 属性。系统会采用哪个参数作为最终的行间距，取决于哪个参数值所表示的行间距大了。</p>
+<p>![img](/Users/linyuan/workspace/unan/astro-blog\src\content\blog\Android - 简单组件 - TextView.assets\mceclip4_20260101_102445-1767345796214-37.png)</p>
+<hr>
+<h3 id="在未显示完的文本后面加省略号">在未显示完的文本后面加省略号(…)</h3>
+<p>当文本内容太多的时候，控件一行显示不开的时候，系统默认的会在最后显示一个省略号(…)</p>
+<p>通过 android:ellipsize 属性可以设置省略号的位置，当属性值为 none 的时候则不显示省略号，默认在对后面加省略号。</p>
+<p><strong>需要设置 android:singleLine=”true”</strong></p>
+<p>代码设置如下：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">textView.</span><span style="color:#B392F0">setEllipsize</span><span style="color:#E1E4E8">(TextUtils.TruncateAt.</span><span style="color:#79B8FF">END</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>xml 报文设置：</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">LinearLayout</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">android</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">orientation</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"vertical"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_ignore1"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"150dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">ellipsize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"start"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">singleLine</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"维基百科的目标是建立拥有人类全部知识的百科全书"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_ignore2"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">ellipsize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"middle"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">singleLine</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"维基百科的目标是建立拥有人类全部知识的百科全书dddddddddddddddddddddd"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_ignore3"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">ellipsize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"end"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">singleLine</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_margin</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"维基百科的目标是建立拥有人类全部知识的百科全书ddddddddddddddddddd"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">LinearLayout></span></span></code></pre>
+<h3 id="用-textview-实现走马灯的效果">用 TextView 实现走马灯的效果</h3>
+<ol>
+<li>TextView 必须要获取焦点 （ android:focusable=”true” android:focusableInTouchMode=”true”）
+<ol>
+<li>android:ellipsize=”marquee”</li>
+<li>android:marqueeRepeatLimit</li>
+<li>android:singleLine=”true”</li>
+</ol>
+</li>
+</ol>
+<p>android:marqueeRepeatLimit=“marquee_forever”或者是大于 0 的整数，marquee_forever 表示永远循环显示。</p>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">LinearLayout</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">android</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">ellipsize</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"marquee"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">focusable</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">focusableInTouchMode</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">marqueeRepeatLimit</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"marquee_forever"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">singleLine</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"true"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"李克勤（Hacken Lee），生于香港，籍贯广东新会崖西，中国香港歌手，演员，主持人"</span><span style="color:#E1E4E8"> /></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">LinearLayout></span></span></code></pre>
+<h3 id="垂直滚动-textview-中的文本让-textview-出现滚动条">垂直滚动 TextView 中的文本（让 TextView 出现滚动条）</h3>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#79B8FF">RelativeLayout</span><span style="color:#B392F0"> xmlns</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">android</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://schemas.android.com/apk/res/android"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">    android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#000"</span><span style="color:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    &#x3C;</span><span style="color:#79B8FF">TextView</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"@+id/id_tv_scroll"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_width</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"match_parent"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">layout_height</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"wrap_content"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">background</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"#FFF"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">singleLine</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"false"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">maxLines</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"4"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">scrollbars</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"vertical"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">scrollbarStyle</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"outsideOverlay"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">scrollbarFadeDuration</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"2000"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">padding</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"10dp"</span></span>
+<span class="line"><span style="color:#B392F0">        android</span><span style="color:#E1E4E8">:</span><span style="color:#B392F0">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"周杰伦， 生于中华民国台北县林口乡，是台湾著名国语流行音乐男歌手、演员、导演及音乐创作人。 周杰伦于2000年正式出道并发行其个人首张同名国语专辑《Jay》，翌年凭借该张专辑获得第十二届台湾金曲奖“最佳流行音乐演唱专辑奖”ddddddddddddddddddddddddddddddddddddddddddddddd。"</span><span style="color:#E1E4E8">/></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">RelativeLayout></span></span></code></pre>
+<p>代码语言：javascript</p>
+<p>AI 代码解释</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">public </span><span style="color:#F97583">class</span><span style="color:#B392F0"> ScrollTextViewAct</span><span style="color:#F97583"> extends</span><span style="color:#B392F0"> Activity</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    @Override</span></span>
+<span class="line"><span style="color:#F97583">    protected</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> onCreate</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">Bundle</span><span style="color:#FFAB70"> savedInstanceState</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#79B8FF">        super</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">onCreate</span><span style="color:#E1E4E8">(savedInstanceState);</span></span>
+<span class="line"><span style="color:#B392F0">        setContentView</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.layout.activity_scroll_text_view);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">        TextView textView </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (TextView) </span><span style="color:#B392F0">findViewById</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">R</span><span style="color:#E1E4E8">.id.id_tv_scroll);</span></span>
+<span class="line"><span style="color:#E1E4E8">        textView.</span><span style="color:#B392F0">setMovementMethod</span><span style="color:#E1E4E8">(ScrollingMovementMethod.</span><span style="color:#B392F0">getInstance</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>android:scrollbars=”vertical” ： 垂直滚动必须为 vertical android:scrollbarStyle=”outsideOverlay” ：滚动条在文字的右侧显示。如果 insideOVerlay 滚动条会在右侧文字上显示（会覆盖文字的一部分）。 android:scrollbarFadeDuration=”2000” 滚动条从出现到消失（以渐变的方式）的时间，单位是毫秒</p>
+<p>转载自：<a href="https://cloud.tencent.com/developer/article/1861574">https://cloud.tencent.com/developer/article/1861574</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>        TextView tv = findViewById(R.id.tv);</span></span>
+<span class="line"><span>        // 设置文字</span></span>
+<span class="line"><span>        tv.setText("你好");</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // 设置文本大小. 使用xml形式会有px、dp、sp的单位需要指定。编码形式默认是sp。建议使用sp</span></span>
+<span class="line"><span>        tv.setTextSize(30);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // 设置颜色 为绿色</span></span>
+<span class="line"><span>//        tv.setTextColor(Color.GREEN);</span></span>
+<span class="line"><span>//        tv.setTextColor(0Xff00ff00);</span></span>
+<span class="line"><span>        // 这里是透明的。如果在xml中设置#00ff00 则是绿色。因为xml中默认是不透明 ff00ff00</span></span>
+<span class="line"><span>        tv.setTextColor(0x00ff00);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        // 设置背景。通过setBackgroundResource可从resource中获取值R.color.gray</span></span>
+<span class="line"><span>        tv.setBackgroundColor(Color.GRAY);</span></span></code></pre>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+&copy; 2026 Your name here. All rights reserved.
+<div class="social-links" data-astro-cid-sz7xmlte> <a href="https://m.webtoo.ls/@astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Mastodon</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/mastodon" data-astro-cid-sz7xmlte><path fill="currentColor" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://twitter.com/astrodotbuild" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Follow Astro on Twitter</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/twitter" data-astro-cid-sz7xmlte><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" data-astro-cid-sz7xmlte></path></svg> </a> <a href="https://github.com/withastro/astro" target="_blank" data-astro-cid-sz7xmlte> <span class="sr-only" data-astro-cid-sz7xmlte>Go to Astro's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github" data-astro-cid-sz7xmlte><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-sz7xmlte></path></svg> </a> </div> </footer>  </body></html>
