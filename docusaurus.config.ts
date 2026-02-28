@@ -4,25 +4,21 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '技术博客',
-  tagline: '代码世界，记录成长',
+  titleDelimiter: ' | ',
+  tagline: '代码世界，记录成长 - 分享技术文章、编程教程和开发经验',
   favicon: 'img/favicon.ico',
 
   future: {
     v4: true,
   },
 
-  url: 'https://your-github-username.github.io',
+  url: 'https://lyuanx.github.io',
   baseUrl: '/',
 
-  organizationName: 'your-github-username',
+  organizationName: 'lyuanx',
   projectName: 'my-blog',
 
   onBrokenLinks: 'throw',
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
 
   presets: [
     [
@@ -34,34 +30,42 @@ const config: Config = {
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
+            title: '技术博客',
+            description: '分享技术文章、编程教程和开发经验',
           },
           editUrl: undefined,
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          blogDescription: '分享技术文章、编程教程和开发经验',
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: '技术博客',
       logo: {
-        alt: '博客 Logo',
+        alt: '技术博客 Logo',
         src: 'img/logo.svg',
       },
       items: [
         {to: '/blog', label: '博客', position: 'left'},
         {
-          href: 'https://github.com/your-github-username',
+          href: 'https://github.com/lyuanx',
           label: 'GitHub',
           position: 'right',
         },
@@ -84,7 +88,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/your-github-username',
+              href: 'https://github.com/lyuanx',
             },
           ],
         },
