@@ -1,0 +1,24 @@
+welcome:
+  label: 欢迎
+  permalink: /welcome
+  description: 欢迎文章
+
+introduction:
+  label: 介绍
+  permalink: /introduction
+  description: 介绍类文章
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus 相关文章
+
+tutorial:
+  label: 教程
+  permalink: /tutorial
+  description: 教程文章
+
+github-pages:
+  label: GitHub Pages
+  permalink: /github-pages
+  description: GitHub Pages 相关
