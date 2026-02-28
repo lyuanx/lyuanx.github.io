@@ -16,7 +16,7 @@ const config: Config = {
   baseUrl: '/',
 
   organizationName: 'lyuanx',
-  projectName: 'my-blog',
+  projectName: 'lyuanx.github.io',
 
   onBrokenLinks: 'throw',
 
